@@ -1,7 +1,6 @@
-// second challenge on edabit 
-// Write a function that takes the base and height of a triangle and return its area.
-function triArea(base, height) {
-    return (base * height) / 2;
-    
+// 3rd challenge on edabit 
+// Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+function additon(num) {
+    return num += 1;
 }
-console.log(triArea(3, 2))
+console.log(additon(2));
