@@ -1,7 +1,7 @@
 //<========== challenge on edabit ==========>
-// Create a function that takes voltage and current and returns the calculated power.
-function circuitPower(voltage, current) {
-    return voltage * current;
+// Write a function that returns the string "something" joined with a space " " and the given argument a.
+function giveMeSomething(a) {
+    return `something ${a}` 
 }
     
-console.log(circuitPower(1, 8));
+console.log(giveMeSomething("is better than nothing"));
