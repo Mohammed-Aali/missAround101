@@ -1,9 +1,7 @@
-// challenge on edabit
-// Create a function that takes an array containing only numbers and return the first element.
-let b = [2, 4, "b", "d"];
-function getFirstValue(d) {
-    return d[0];
+//<========== challenge on edabit ==========>
+// Create a function that takes voltage and current and returns the calculated power.
+function circuitPower(voltage, current) {
+    return voltage * current;
 }
-
     
-console.log(getFirstValue(b));
+console.log(circuitPower(1, 8));
