@@ -1,6 +1,14 @@
 //<========== challenge on edabit ==========>
-//Write a function that takes the base and height of a triangle and return its area.
-function triArea(base, height) {
-    return (base * height) / 2;
+//A decimal number can be represented as a sequence of bits. To illustrate:
+function bitwiseAND(n1, n2) {
+	return (n1 & n2);
 }
-console.log(triArea(6, 8))
+
+function bitwiseOR(n1, n2) {
+	return (n1 | n2);
+}
+
+function bitwiseXOR(n1, n2) {
+	return (n1 ^ n2);
+}
+console.log(bitwiseOR(6, 8))
