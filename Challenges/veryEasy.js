@@ -1,9 +1,9 @@
-// challenge on JSCodebox cuz edabit won't load
-// Given are two arrays a and b, both have three elements. Return a new array of length 2 containing both middle (index 1) elements of the arrays.
-let a = [1,2,4];
-let b = [1,2,4];
-function goldenMiddle(a, b) {
-  let c = [a[1], b[1]]
-  return c;
+// challenge on edabit
+// There is a single operator in JavaScript, capable of providing the remainder of a division operation. Two numbers are passed as parameters. The first parameter divided by the second parameter will have a remainder, possibly zero. Return that value.
+function remainder(a, b) {
+    return b% a;
 }
-console.log(goldenMiddle(a,b));
+   
+    
+
+console.log(remainder(9, 45));
