@@ -1,5 +1,5 @@
 //<========== challenge on edabit ==========>
-//Create a function that takes length and width and finds the perimeter of a rectangle.
+//You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
 function findPerimeter(a, c) {
 	return a * 2 + c * 3;
 }
