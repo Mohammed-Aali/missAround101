@@ -1,10 +1,6 @@
 //<========== challenge on edabit ==========>
-//Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
-function addUp(b) {
-	let sum = 0;
-	for (let i = 0; i <= b; i++) {
-		sum += i;
-	}
-	return sum;
+//Create a function that takes length and width and finds the perimeter of a rectangle.
+function findPerimeter(a, c) {
+	return (a + c) * 2;
 }
-console.log(addUp(4))
+console.log(findPerimeter(20, 10))
