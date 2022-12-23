@@ -1,6 +1,6 @@
 //<========== challenge on edabit ==========>
-//You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
-function findPerimeter(a, c) {
-	return a * 2 + c * 3;
+//Given an n-sided regular polygon n, return the total sum of internal angles (in degrees).
+function sumPolygon(n) {
+	return ( n - 2 ) * 180;
 }
-console.log(findPerimeter(1, 1))
+console.log(sumPolygon(5))
