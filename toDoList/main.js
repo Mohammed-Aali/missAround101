@@ -67,4 +67,8 @@ window.addEventListener('load', () => {
 
         
     });
+    localStorage.setItem("p", "form");
+    const loadedPage = localStorage.getItem("p");
+    loadedPage;
 });
+
