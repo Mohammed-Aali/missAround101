@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Head First Java Script</title>
     <script>
-        let scoops = 1;
-        if (scoops < 3) {
-            alert("We're running low on Ice cream")
+        let scoops = 2;
+        if (scoops >= 5) {
+            alert("The ice cream is going to melt hurry up and eat it!")
+        } else if (scoops < 3 && scoops > 1) {
+            alert("We're running out of ice cream")
+        } else if (scoops == 0) {
+            document.write("Life without ice cream isn't the same");
         }
         document.write("Life without ice cream isn't the same");
 
