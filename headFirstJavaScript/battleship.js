@@ -1,6 +1,8 @@
-let location1 = 1;
-let location2 = 2;
-let location3 = 3;
+let randomLoc = Math.floor(Math.random() * 5);
+console.log(randomLoc);
+let location1 = randomLoc;
+let location2 = location1 + 1;
+let location3 = location2 + 1;
 let guess;
 let hits = 0;
 let guesses = 0;
@@ -15,16 +17,15 @@ while ( isSunk == false ) {
 
     if (guess == location1 || guess == location2 || guess == location3) {
     hits = hits + 1;
-    alert("Hit!") 
+    alert("HIT!");
 
     if(hits == 3){
     isSunk = true;
     alert("You sank my battle ship :'(")
     } 
-7
     
     } else {
-    alert("Miss");
+    alert("MISS");
     }
 
    }
