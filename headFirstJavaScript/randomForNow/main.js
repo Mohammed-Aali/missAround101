@@ -5,4 +5,4 @@ function bark(name, weight) {
         console.log(name + " says woof woof")
     }
 }
-bark("rover", 20);
+bark("r", 30);
