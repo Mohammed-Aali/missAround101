@@ -1,5 +1,4 @@
 let randomLoc = Math.floor(Math.random() * 5);
-console.log(randomLoc);
 let location1 = randomLoc;
 let location2 = location1 + 1;
 let location3 = location2 + 1;
