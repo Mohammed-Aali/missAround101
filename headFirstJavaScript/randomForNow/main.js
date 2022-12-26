@@ -1,8 +1,13 @@
-function bark(name, weight) {
-    if (weight > 20 ) {
-        console.log(name + " says WOOF WOOF")
+function whatShallIWear(temp) {
+    if (temp < 60) {
+        console.log("wear a jacket");
+    } else if (temp < 70 ) {
+        console.log("wear a sweater");
     } else {
-        console.log(name + " says woof woof")
+        console.log("wear a t-shirt");
     }
-}
-bark("r", 30);
+};
+
+whatShallIWear(50);
+whatShallIWear(80);
+whatShallIWear(60);
