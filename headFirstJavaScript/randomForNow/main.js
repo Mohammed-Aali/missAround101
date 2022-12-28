@@ -42,7 +42,7 @@ function getBestSolutions(array, highScore) {
 
 
 function getMostEffectiveSolution(array1, array2, highScore) {
-    let cost = 1;
+    let cost = 100;
     let k;
     for (let i = 0; i < array1.length; i++) {
     if (array1[i] == highScore) {
