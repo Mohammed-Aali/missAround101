@@ -1,9 +1,16 @@
 let dog = {
     name: "Fido",
     weight: 20.2,
+    age: 4,
     breed: "mixed",
     activity: "fetch balls"
 };
+
+dog.dogYears = 35;
+console.log(dog)
+delete dog.dogYears;
+console.log(dog);
+
 let bark;
 if (dog.weight > 20) {
     bark = "WOOF WOOF"
