@@ -1,31 +1,79 @@
-// let eightBall = {
-//     index: 0,
-//     advice: [`yes`, `no`, `maaybe`, `not a chance`],
-//     shake: function() {
-//         this.index = this.index + 1;
-
-//         if (this.index >= this.advice.length) {
-//             this.index = 0;
-//         }
-//     },
-//     look: function() {
-//         return this.advice[this.index];
-//     }
-// }
-
-var eightBall = { index: 0, 
-    advice: ["yes", "no", "maybe", "not a chance"],
-    shake: function() { 
-    this.index = this.index + 1;
-    if (this.index >= this.advice.length) {
-    // this.index = 0;
-    this.index = this.index + 1;
-    }
+let cadi = { 
+    make: "GM",
+    model: "Cadillac",
+    year: 1955,
+    color: "tan",
+    passengers: 5,
+    convertible: false,
+    mileage: 12892,
+    started: false,
+    start: function() {
+        this.started = true;
     },
-    look: function() {
-    return this.advice[this.index];
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if(this.started) {
+            alert(`${this.make} ${this.model} goes zoom zoom!`);
+        } else {
+            alert(`You need to start the engine first.`)
+        }
     }
-    
-   }; 
-   eightBall.shake(); 
-   console.log(eightBall.look());
+};
+
+let chevy = { 
+    make: "Chevy",
+    model: "Bel Air",
+    year: 1957, 
+    color: "red",
+    passengers: 2,
+    convertible: false,
+    mileage: 1021,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if(this.started) {
+            alert(`${this.make} ${this.model} goes zoom zoom!`);
+        } else {
+            alert(`You need to start the engine first.`)
+        }
+    }
+};
+
+let taxi = { 
+    make: "Webville Motors",
+    model: "Taxi",
+    year: 1955,
+    color: "yellow",
+    passengers: 4,
+    convertible: false,
+    mileage: 281341,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if(this.started) {
+            alert(`${this.make} ${this.model} goes zoom zoom!`);
+        } else {
+            alert(`You need to start the engine first.`)
+        }
+    }
+};
+
+cadi.start();
+cadi.drive();
+cadi.stop();
+chevy.start();
+chevy.drive();
+chevy.stop();
+taxi.start();
+taxi.drive();
+taxi.stop();
