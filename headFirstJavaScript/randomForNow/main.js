@@ -1,26 +1,31 @@
-let plane = {
-    make: "heaven",
-    model: "AC130",
-    year: 1999,
-    color: "black",
-    passangers: 2,
-    convertible: false,
-    mileage: 1000000,
-    started: false,
-    start: function(){
-        this.started = true;
-    },
-    stop: function(){
-        this.started = false;
-    },
-    fly: function() {
-        if (this.started) {
-            alert(`our AC130 is in the air`);
-        } else {
-            alert(`plane is switched off. You might want to consider turning it on`)
-        }
-    }
-}
+// let eightBall = {
+//     index: 0,
+//     advice: [`yes`, `no`, `maaybe`, `not a chance`],
+//     shake: function() {
+//         this.index = this.index + 1;
 
-console.log(plane.stop());
-console.log(plane);
+//         if (this.index >= this.advice.length) {
+//             this.index = 0;
+//         }
+//     },
+//     look: function() {
+//         return this.advice[this.index];
+//     }
+// }
+
+var eightBall = { index: 0, 
+    advice: ["yes", "no", "maybe", "not a chance"],
+    shake: function() { 
+    this.index = this.index + 1;
+    if (this.index >= this.advice.length) {
+    // this.index = 0;
+    this.index = this.index + 1;
+    }
+    },
+    look: function() {
+    return this.advice[this.index];
+    }
+    
+   }; 
+   eightBall.shake(); 
+   console.log(eightBall.look());
