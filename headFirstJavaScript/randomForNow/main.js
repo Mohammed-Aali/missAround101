@@ -30,6 +30,7 @@ let chevy = {
     passengers: 2,
     convertible: false,
     mileage: 1021,
+    started: false,
     start: function() {
         this.started = true;
     },
@@ -53,27 +54,49 @@ let taxi = {
     passengers: 4,
     convertible: false,
     mileage: 281341,
+    started: false,
+    fuel: 0,
     start: function() {
-        this.started = true;
+        if(this.fuel > 0) {
+            this.started = true;
+            alert(`the car is turned on`)
+        } else {
+            alert(`The car is empty, fill up before starting!`)
+        }
     },
     stop: function() {
         this.started = false;
+        alert(`the car is turned off`);
     },
     drive: function() {
-        if(this.started) {
-            alert(`${this.make} ${this.model} goes zoom zoom!`);
+        if (this.started) {
+            if (this.fuel > 0) {
+                alert(`${this.make} ${this.model} goes zoom zoom`);
+                this.fuel = this.fuel - 1;
+            } else {
+                alert(`Uh oh, out of fuel.`);
+                this.stop();
+            }
         } else {
-            alert(`You need to start the engine first.`)
+            alert(`You need to start the engine first.`);
         }
+    },
+    addFuel: function(amount){
+        this.fuel = this.fuel + amount;
     }
 };
 
-cadi.start();
-cadi.drive();
-cadi.stop();
-chevy.start();
-chevy.drive();
-chevy.stop();
+
 taxi.start();
+console.log(taxi);
+taxi.addFuel(1);
+console.log(taxi);
+taxi.start();
+console.log(taxi);
 taxi.drive();
+console.log(taxi);
 taxi.stop();
+console.log(taxi);
+
+
+
