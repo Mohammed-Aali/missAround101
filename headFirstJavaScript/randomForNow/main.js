@@ -1,32 +1,26 @@
-
-function makeCar () {
-    let make = ["chevy", "toyota", "lexus", "honda", "Pagani", "ferrari"];
-    let models = ["corvette", "camery", "ls-500", "civic", "huaira", "laferrari"];
-    let years = [2013, 2022, 2012, 2023, 2018, 2010];
-    let colors = ["red", "blue", "tan", "yellow", "white"];
-    let convertible = [true, false];
-
-    let rand1 = Math.floor(Math.random() * make.length);
-    let rand2 = Math.floor(Math.random() * models.length);
-    let rand3 = Math.floor(Math.random() * years.length);
-    let rand4 = Math.floor(Math.random() * colors.length);
-    let rand5 = Math.floor(Math.random() * 2);
-    let rand6 = Math.floor(Math.random() * 5 ) + 1;
-
-    let car = {
-        make: make[rand1],
-        model: models[rand2],
-        year: years[rand3],
-        color: colors[rand4],
-        passengers: rand6,
-        convertible: convertible[rand5]
+let plane = {
+    make: "heaven",
+    model: "AC130",
+    year: 1999,
+    color: "black",
+    passangers: 2,
+    convertible: false,
+    mileage: 1000000,
+    started: false,
+    start: function(){
+        this.started = true;
+    },
+    stop: function(){
+        this.started = false;
+    },
+    fly: function() {
+        if (this.started) {
+            alert(`our AC130 is in the air`);
+        } else {
+            alert(`plane is switched off. You might want to consider turning it on`)
+        }
     }
-
-    return car;
 }
 
-function displayCar(car) {
-    console.log(`Your new car is a ${car.year} ${car.make} ${car.model}`);
-};
-
-displayCar(makeCar());
+console.log(plane.stop());
+console.log(plane);
