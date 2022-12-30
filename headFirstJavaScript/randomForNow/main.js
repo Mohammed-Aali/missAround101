@@ -1,3 +1,7 @@
-let planet = document.getElementById("greenplanet");
-planet.innerHTML = "RED ALERT: hit by phaser fire";
-// you can turn back pages but not time
+function init() {
+    let planet = document.getElementById("greenplanet");
+    planet.innerHTML = "RED ALERT: hit by phaser fire";
+};
+
+window.onload = init;
+
