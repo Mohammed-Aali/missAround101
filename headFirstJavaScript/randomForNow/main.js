@@ -1,11 +1,5 @@
-function prop(type) {
-    console.log(typeof type);
+if ( 99 == "99") {
+    console.log(`A number is equal to a string`);
+} else {
+    console.log(`No way a number is equal to a string`);
 }
-prop("abcd");
-prop(123);
-prop({});
-prop([]);
-prop();
-prop({"abcd" : 123});
-prop(["abcd", 123]);
-prop(() => {return "abcd"});
