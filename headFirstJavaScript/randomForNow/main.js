@@ -1,44 +1,17 @@
-function lieDetectorTest() {
-    let lies = 0;
-    
-    let stolenDiamond = { };
-    if (stolenDiamond) {
-        console.log(`You stole the dimonds!`);
-        lies++;
+let mo = "mohammed ali al ali";
+let i = 0;
+while (i < mo.length) {
+    if (mo.charAt(i) === "a") {
+        console.log(`this mo has an a at ${i}`);
     }
-
-    let car = {
-        keyInPocket: null
-    };
-    if(car.keyInPocket) {
-        console.log(`The key is in your pocket!`)
-        lies++;
-    }
-    if(car.emptyGasTank) {
-        console.log(`You drove the car after you stole it!`);
-        lies++;
-    }
-
-    let foundYouAtTheCrimeScene = [ ];
-    if(foundYouAtTheCrimeScene) {
-        console.log(`A sure sign of guilt`);
-        lies++
-    }
-    if(foundYouAtTheCrimeScene[0]) {
-        console.log(`Caught with a stolen item!`);
-        lies++
-    }
-
-    let yourName = " ";
-    if (yourName) {
-        console.log(`Guess you lied about your name`);
-        lies++
-    }
-    return lies;
+    i++
 }
 
-let numberOfLies = lieDetectorTest();
-console.log(`You told ${numberOfLies} lies!`);
-if (numberOfLies > 3) {
-    console.log(`This mofo is guilty`)
-}
+let index = mo.indexOf("dog", 10);
+console.log(`there is an ali at ${index} just chilling.`);
+
+let val = mo.substring(9);
+console.log(`the substring is ${val}`);
+
+let vals = mo.split(" ");
+console.log(`Split array is`, vals);
