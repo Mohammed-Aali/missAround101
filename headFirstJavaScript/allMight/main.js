@@ -13,12 +13,46 @@ let view = {
     }
 };
 
-let ships = [ { locations: ["10", "20", "30"],
-hits: ["", "", ""] }, {locations: ["32", "33", "34"],
-hits: ["", "", ""] }, { locations: ["63", "64", "65"],
-hits: ["", "", "hit"]} ];
+let model = {
+    boardSize: 7,
+    numShips: 3,
+    shipLength: 3,
+    shipsSunk: 0,
 
-let shit2 = ships[1];
-let locations = shit2.locations;
-console.log(`The location of the second ship is ${locations[1]}`);
+    ships: [ { locations: ["10", "20", "30"],
+    hits: ["", "", ""] }, {locations: ["32", "33", "34"],
+    hits: ["", "", ""] }, { locations: ["63", "64", "65"],
+    hits: ["", "", ""]} ],
+
+    fire: function(guess){
+        for(let i = 0; i < this.numShips; i++) {
+            let ship = this.ships[i];
+            let index = ship.locations.indexOf(guess);
+            if (index >= 0) {
+                ship.hits[index] = "hit";
+                view.displayHit(guess);
+                view.displayMessage("HIT!")
+                if (this.isSunk(ship)) {
+                    view.displayMessage("You sank my battleship!")
+                    this.shipsSunk++;
+                }
+                return true;
+            }
+        }
+        view.displayMiss(guess);
+        displayMessage("You missed.");
+        return false;
+    },
+
+    isSunk: function(ship) {
+        for (let i = 0; i < this.shipLength; i++) {
+            if (ship.hits[i] !== "hit") {
+                return false;
+            }
+        }
+        return true;
+    }
+
+ 
+};
 
