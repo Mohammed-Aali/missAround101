@@ -82,6 +82,7 @@ let model = {
                 newShipLocation.push((row + i) + `` + col);
             }
         }
+       
         return newShipLocation;
     },
     collision: function(locations) {
