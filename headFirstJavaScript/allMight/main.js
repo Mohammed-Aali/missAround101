@@ -51,6 +51,16 @@ let model = {
             }
         }
         return true;
+    },
+
+    generateShipLocations: function() {
+        let locations;
+        for(let i = 0; i < this.numShips; i++) {
+            do {
+                locations = this.generateShip();
+            } while (this.collision(locations));
+            this.ships[i].locations = locations;
+        }
     }
 };
 
@@ -62,6 +72,9 @@ let controller = {
         if (location) {
             this.guesses++;
             let hit = model.fire(location);
+            if (hit && model.shipsSunk === model.numShips) {
+                view.displayMessage(`You sank all my battlseships, in ${this.guesses} guesses`);
+            }
         }
     }
 };
@@ -85,8 +98,29 @@ function parseGuess(guess) {
     return null;
 }
 
-console.log(parseGuess("A0"));
-console.log(parseGuess("B6"));
-console.log(parseGuess("G3"));
-console.log(parseGuess("H0"));
-console.log(parseGuess("A7"));
+function init() {
+    let fireButton = document.getElementById("fireButton");
+    fireButton.onclick = handleFireButton;
+    let guessInput = document.getElementById("guessInput");
+    guessInput.onkeypress = handleKeyPress;
+}
+
+function handleKeyPress(e) {
+    let fireButton = document.getElementById("fireButton");
+    if(e.keyCode === 13) {
+        fireButton.click();
+        return false;
+    }
+}
+
+function handleFireButton() {
+    let guessInput = document.getElementById("guessInput");
+    let guess = guessInput.value;
+    controller.processGuess(guess);
+
+    guessInput.value = "";
+}
+
+window.onload = init;
+
+console.log(Math.floor(Math.random() * 2))
