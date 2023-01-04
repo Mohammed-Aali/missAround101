@@ -4,27 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>toDoList2</title>
+    <title>ToDo list with localStorage</title>
 </head>
 <body>
-<header>
-<div id="content">
-    <div id="form">
-    <form>
-    <input id="textInput" type="text">
-    <input id="bttn" type="submit">
-    </form>
-    </div>
-</div>
-</header>
-<main>
-<div id="insertedContent">
-    <ul id="list">
-        
-    </ul>
-</div>
-</main>
-<script src="main.js"></script> 
+    <main class="app">
+    <section class="greeting">
+        <h2 class="title">
+            what's up <input type="text" id="name" placeholder="Name Here"/>
+        </h2>
+    </section>
+
+    <section class="creatToDo">
+        <h3>CREATE TO DO</h3>
+
+        <form action="">
+            <h4>What's on your ToDo list?</h4>
+            <input type="text" name="content" id="content" placeholder="e.g kill 20 birds with one stone">
+            <h4>Pick a category</h4>
+            <div class="options">
+                <label>
+                    <input type="radio" name="category" id="category1" value="Business" />
+                    <span class="bubbleBusiness"></span>
+                    <div>Business</div>
+                </label>
+                <label>
+                    <input type="radio" name="category" id="category2" value="personal" />
+                    <span class="bubblePersonal"></span>
+                    <div>Personal</div>
+                </label>
+            </div>
+            <input type="submit" value="Add ToDo" />
+        </form>
+    </section>
+
+    <section class="toDoList">
+        <h3>TODO LIST</h3>
+            <div id="toDoList" class="list">
+                <div class="toDoItem">
+                    <label>
+                        <input type="checkbox"/>
+                        <span class="bubbleBusiness"></span>
+                    </label>
+
+                    <div class="toDoContent">
+                        <input type="text" value="Make a video" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">delete</button>
+                    </div>
+                </div>
+                <div class="toDoItem">
+                    <label>
+                        <input type="checkbox"/>
+                        <span class="bubbleBusiness"></span>
+                    </label>
+
+                    <div class="toDoContent">
+                        <input type="text" value="Make a video" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">delete</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+    </main>
+<script src="main.js"></script>
 </body>
 </html>
