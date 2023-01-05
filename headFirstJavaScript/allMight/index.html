@@ -2,17 +2,23 @@
 <html lang="en-us">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+window.onload = init;
+function init(){
+    let map = document.getElementById("map");
+    map.onmousemove = showCoords;
+}
+function showCoords(eventObj) {
+    let map = document.getElementById("coords");
+    let x = eventObj.screenX;
+    let y = eventObj.screenY;
+    map.innerHTML = y +","+ x;
+}
+</script>  
 <title>Image Guess</title>
-<style> body { margin: 20px; }
-img { margin: 20px; }</style>
-<script src="main.js"></script>
 </head>
 <body>
-    <img id="zero" src="/headFirstJavaScript/Head-First-JavaScript-Programming-master/Head-First-JavaScript-Programming-master/chapter9/zeroblur.jpg" alt="blured image 0">
-    <img id="one" src="/headFirstJavaScript/Head-First-JavaScript-Programming-master/Head-First-JavaScript-Programming-master/chapter9/oneblur.jpg" alt="blured Image 1">
-    <img id="two" src="/headFirstJavaScript/Head-First-JavaScript-Programming-master/Head-First-JavaScript-Programming-master/chapter9/twoblur.jpg" alt="blured Image 2">
-    <img id="three" src="/headFirstJavaScript/Head-First-JavaScript-Programming-master/Head-First-JavaScript-Programming-master/chapter9/threeblur.jpg" alt="blured Image 3">
-    <img id="four" src="/headFirstJavaScript/Head-First-JavaScript-Programming-master/Head-First-JavaScript-Programming-master/chapter9/fourblur.jpg" alt="blured Image 4">
-    <img id="five" src="/headFirstJavaScript/Head-First-JavaScript-Programming-master/Head-First-JavaScript-Programming-master/chapter9/fiveblur.jpg" alt="blured Image 5">
+<img id="map" src="/headFirstJavaScript/Head-First-JavaScript-Programming-master/Head-First-JavaScript-Programming-master/chapter9/map.jpg" alt="treasure map">
+<p id="coords">Move mouse to these location to find</p>
 </body>
 </html>
