@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<script>
-window.onload = init;
-function init(){
-    let map = document.getElementById("map");
-    map.onmousemove = showCoords;
-}
-function showCoords(eventObj) {
-    let map = document.getElementById("coords");
-    let x = eventObj.screenX;
-    let y = eventObj.screenY;
-    map.innerHTML = y +","+ x;
-}
-</script>  
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
 <title>Image Guess</title>
 </head>
 <body>
 <img id="map" src="/headFirstJavaScript/Head-First-JavaScript-Programming-master/Head-First-JavaScript-Programming-master/chapter9/map.jpg" alt="treasure map">
 <p id="coords">Move mouse to these location to find</p>
+<script>
+let tick = true;
+function ticker() {
+    if (tick) {
+        console.log("tick");
+        tick = false;
+    } else {
+        console.log("tock");
+        tick = true;
+    }
+}
+</script>
 </body>
 </html>
