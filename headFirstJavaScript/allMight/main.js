@@ -1,11 +1,10 @@
-const input = document.querySelector(`input`);
-const h1 = document.querySelector(`h1`);
+localStorage.setItem(`name`, `mohammed`);
+localStorage.removeItem(`name`);
 
-h1.innerHTML = localStorage.getItem(`hello`);
-input.addEventListener(`keyup`, display);
+sessionStorage.setItem(`name`, `ali`);
+sessionStorage.setItem(`name`, `Ahmed`);
 
-function display() {
-    localStorage.setItem(`hello`, input.value);
-    h1.innerHTML = localStorage.getItem(`hello`);
-}
+document.cookie = "name=mohammed; expires=" + new Date(2023, 1, 6).toUTCString();
+document.cookie = "lastName=Ali; expires=" + new Date(2023, 0, 7).toUTCString();
 
+console.log(document.cookie);
