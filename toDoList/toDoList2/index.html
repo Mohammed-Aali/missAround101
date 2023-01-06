@@ -12,26 +12,26 @@
     <main class="app">
     <section class="greeting">
         <h2 class="title">
-            what's up <input type="text" id="name" placeholder="Name Here"/>
+            what's up,<input type="text" id="name" placeholder="Name Here"/>
         </h2>
     </section>
 
-    <section class="creatToDo">
+    <section class="createToDo">
         <h3>CREATE TO DO</h3>
 
-        <form action="">
+        <form id="newToDoForm">
             <h4>What's on your ToDo list?</h4>
             <input type="text" name="content" id="content" placeholder="e.g kill 20 birds with one stone">
             <h4>Pick a category</h4>
             <div class="options">
                 <label>
-                    <input type="radio" name="category" id="category1" value="Business" />
-                    <span class="bubbleBusiness"></span>
+                    <input type="radio" name="category" id="category1" value="business" />
+                    <span class="bubble business"></span>
                     <div>Business</div>
                 </label>
                 <label>
                     <input type="radio" name="category" id="category2" value="personal" />
-                    <span class="bubblePersonal"></span>
+                    <span class="bubble personal"></span>
                     <div>Personal</div>
                 </label>
             </div>
@@ -42,10 +42,10 @@
     <section class="toDoList">
         <h3>TODO LIST</h3>
             <div id="toDoList" class="list">
-                <div class="toDoItem">
+                <!-- <div class="toDoItem done">
                     <label>
                         <input type="checkbox"/>
-                        <span class="bubbleBusiness"></span>
+                        <span class="bubble Business"></span>
                     </label>
 
                     <div class="toDoContent">
@@ -60,7 +60,7 @@
                 <div class="toDoItem">
                     <label>
                         <input type="checkbox"/>
-                        <span class="bubbleBusiness"></span>
+                        <span class="bubble personal"></span>
                     </label>
 
                     <div class="toDoContent">
@@ -71,7 +71,7 @@
                         <button class="edit">Edit</button>
                         <button class="delete">delete</button>
                     </div>
-                </div>
+                </div> -->
             </div>
     </section>
     </main>
