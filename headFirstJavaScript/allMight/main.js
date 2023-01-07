@@ -1,10 +1,26 @@
-localStorage.setItem(`name`, `mohammed`);
-localStorage.removeItem(`name`);
+let winner = function() {alert(`WINNER!`)};
+let loser = function() {alert(`LOSER`)}
 
-sessionStorage.setItem(`name`, `ali`);
-sessionStorage.setItem(`name`, `Ahmed`);
+let a = winner;
+let b = loser;
+let c = loser;
 
-document.cookie = "name=mohammed; expires=" + new Date(2023, 1, 6).toUTCString();
-document.cookie = "lastName=Ali; expires=" + new Date(2023, 0, 7).toUTCString();
 
-console.log(document.cookie);
+console.log(c = a)
+console.log(a = b)
+console.log(b = c)
+console.log(c = a)
+console.log(a = c)
+console.log(a = b)
+console.log(b = c)
+a()
+
+
+
+
+
+
+
+
+
+
