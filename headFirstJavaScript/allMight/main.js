@@ -1,10 +1,30 @@
-function sayIt(translator) {
-    let phrase = translator("Hello");
-    alert(phrase);
-}
-function hawaiianTranslator(word) {
-    if (word === "Hello") {return `Aloha`};
-    if (word === "Goodbye") {return `Aloha`};
+let passengers = [ { name: "Jane Doloop", paid: true },
+ { name: "Dr. Evel", paid: true },
+ { name: "Sue Property", paid: false },
+ { name: "John Funcall", paid: true } ];
+
+function processPassengers(passengers, testFunction) {
+    for (let i = 0; i < passengers.length; i++) {
+        if(testFunction(passengers[i])) {
+            return false;
+        }
+    }
+    return true;
 }
 
-sayIt(hawaiianTranslator);
+function checkNoFlyList(passenger) {
+    return (passenger.name === "Dr. Evel");
+}
+
+function checkNotPaid(passenger) {
+    return(!passenger.paid)
+}
+
+let allCanFly = processPassengers(passengers, checkNoFlyList);
+if(!allCanFly) {
+    console.log(`the plane can't take off: we hava a passenger on the no-fly-list.`)
+}
+let allPaid = processPassengers(passengers, checkNotPaid);
+if(!allPaid) {
+    console.log(`the plane can't take off: not everyone has paid.`)
+}
