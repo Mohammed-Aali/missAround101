@@ -1,30 +1,70 @@
-let passengers = [ { name: "Jane Doloop", paid: true },
- { name: "Dr. Evel", paid: true },
- { name: "Sue Property", paid: false },
- { name: "John Funcall", paid: true } ];
+var passengers = [ { name: "Jane Doloop", paid: true, ticket: "coach" },
+ { name: "Dr. Evel", paid: true, ticket: "firstclass" },
+ { name: "Sue Property", paid: false, ticket: "premium economy" },
+ { name: "John Funcall", paid: true, ticket: "coach" } ];
 
-function processPassengers(passengers, testFunction) {
-    for (let i = 0; i < passengers.length; i++) {
-        if(testFunction(passengers[i])) {
-            return false;
+ function serveCustomer(passengers) {
+    let getDrinkOrderFunction = createDrinkOrder(passengers);
+    let getMovie = showMovie(passengers);
+    let getFood = feedMe(passengers);
+    getDrinkOrderFunction();
+    // get dinner order
+    getFood();
+    getDrinkOrderFunction();
+    getDrinkOrderFunction();
+    // show movie
+    getMovie();
+    getDrinkOrderFunction();
+    // pick up trash
+
+ }
+function showMovie(passengers) {
+    let moveiToWatch;
+    if (passengers) {
+        moveiToWatch = function () {
+            alert(`movie: darkknight`)
         }
     }
-    return true;
+    return moveiToWatch;
+}
+function feedMe(passengers){
+    let getFood;
+    if(passengers){
+        getFood = function() {
+            alert(`food is coming in hot`);
+        }
+    }
+    return getFood;
 }
 
-function checkNoFlyList(passenger) {
-    return (passenger.name === "Dr. Evel");
+ function createDrinkOrder(passengers) {
+    let orderFunction;
+    if(passengers.ticket === `firstclass`) {
+        orderFunction = function() {
+            alert(`Would you like cocktail or wine?`)
+        }
+    } else if (passengers.ticket === `premium economy`){
+        orderFunction = function() {
+            alert(`Would you water or cola or perhaps wine?`)
+        }
+
+    } else {
+        orderFunction = function() {
+            alert(`Would you water or cola?`)
+        }
+    }
+    return orderFunction;
+ }
+
+function servePassenger(passengers) {
+    for (let i = 0; i < passengers.length; i++) {
+        serveCustomer(passengers[i]);
+    }
 }
 
-function checkNotPaid(passenger) {
-    return(!passenger.paid)
-}
+servePassenger(passengers);
 
-let allCanFly = processPassengers(passengers, checkNoFlyList);
-if(!allCanFly) {
-    console.log(`the plane can't take off: we hava a passenger on the no-fly-list.`)
-}
-let allPaid = processPassengers(passengers, checkNotPaid);
-if(!allPaid) {
-    console.log(`the plane can't take off: not everyone has paid.`)
-}
+
+
+
+
