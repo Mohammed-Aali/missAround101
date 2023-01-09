@@ -1,22 +1,12 @@
-window.onload = function() {
-    var button = document.getElementById("bake");
-    button.onclick = function(){console.log("Time to bake the cookies.");
-    cookies.bake(2500);
-}
-};
-var cookies = {
- instructions: "Preheat oven to 350...",
- bake: function(time) {
- console.log("Baking the cookies.");
- setTimeout(done, time);
- }
-};
+let secret = `007`;
 
-function done() {
- alert("Cookies are ready, take them out to cool.");
- console.log("Cooling the cookies.");
+function getSecret() {
+    let secret = `008`;
 
- setTimeout(function() {
-    alert("Cookies are cool, time to eat!")
- }, 1000);
+    function getValue(){
+        return secret;
+    }
+    return getValue
 }
+let getValueFun = getSecret();
+console.log(getValueFun())
