@@ -1,70 +1,55 @@
-var passengers = [ { name: "Jane Doloop", paid: true, ticket: "coach" },
- { name: "Dr. Evel", paid: true, ticket: "firstclass" },
- { name: "Sue Property", paid: false, ticket: "premium economy" },
- { name: "John Funcall", paid: true, ticket: "coach" } ];
+let products = [  { name: "Grapefruit", calories: 170, color: "red", sold: 8200 },
+{ name: "Orange", calories: 160, color: "orange", sold: 12101 },
+{ name: "Cola", calories: 210, color: "caramel", sold: 25412 },
+{ name: "Diet Cola", calories: 0, color: "caramel", sold: 43922 },
+{ name: "Lemon", calories: 200, color: "clear", sold: 14983 },
+{ name: "Raspberry", calories: 180, color: "pink", sold: 9427 },
+{ name: "Root Beer", calories: 200, color: "caramel", sold: 9909 },
+{ name: "Water", calories: 0, color: "clear", sold: 62123 } ];
 
- function serveCustomer(passengers) {
-    let getDrinkOrderFunction = createDrinkOrder(passengers);
-    let getMovie = showMovie(passengers);
-    let getFood = feedMe(passengers);
-    getDrinkOrderFunction();
-    // get dinner order
-    getFood();
-    getDrinkOrderFunction();
-    getDrinkOrderFunction();
-    // show movie
-    getMovie();
-    getDrinkOrderFunction();
-    // pick up trash
-
- }
-function showMovie(passengers) {
-    let moveiToWatch;
-    if (passengers) {
-        moveiToWatch = function () {
-            alert(`movie: darkknight`)
-        }
-    }
-    return moveiToWatch;
-}
-function feedMe(passengers){
-    let getFood;
-    if(passengers){
-        getFood = function() {
-            alert(`food is coming in hot`);
-        }
-    }
-    return getFood;
+function compareSold(colaA, colaB) {
+    return colaA.sold - colaB.sold;
 }
 
- function createDrinkOrder(passengers) {
-    let orderFunction;
-    if(passengers.ticket === `firstclass`) {
-        orderFunction = function() {
-            alert(`Would you like cocktail or wine?`)
-        }
-    } else if (passengers.ticket === `premium economy`){
-        orderFunction = function() {
-            alert(`Would you water or cola or perhaps wine?`)
-        }
+function printProducts(products) {
+    for(let i = 0; i < products.length; i++) {
+        console.log(`Name: ${products[i].name}, Calories: ${products[i].calories}, Color: ${products[i].color}, Sold: ${products[i].sold}`)
+    }
+}
 
+function compareName(colaA, colaB){
+    if(colaA.name > colaB.name) {
+        return 1;
+    } else if (colaA.name === colaB.name) {
+        return 0;
     } else {
-        orderFunction = function() {
-            alert(`Would you water or cola?`)
-        }
-    }
-    return orderFunction;
- }
-
-function servePassenger(passengers) {
-    for (let i = 0; i < passengers.length; i++) {
-        serveCustomer(passengers[i]);
-    }
+        return -1;
+    }   
 }
 
-servePassenger(passengers);
+function compareCalories(colaA, colaB){
+    return colaA.calories - colaB.calories;
+}
 
+function compareColor(colaA, colaB) {
+    if(colaA.color > colaB.color) {
+        return 1;
+    } else if (colaA.color === colaB.color) {
+        return 0;
+    } else {
+        return -1;
+    }   
+}
 
+products.sort(compareName);
+console.log(`products sorted by name:`);
+printProducts(products);
 
+products.sort(compareCalories);
+console.log(`products sorted by Calories:`);
+printProducts(products);
 
+products.sort(compareColor);
+console.log(`products sorted by ColorcompareColor:`);
+printProducts(products);
 
