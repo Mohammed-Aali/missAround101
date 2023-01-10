@@ -5,17 +5,16 @@
 <link rel="stylesheet" href="style.css">
 <title>this page</title>
 <style> button { margin: 10px; } div { padding: 10px }</style>
-<script>
-window.onload = function(){
-    let count = 0;
-    let message = "you Clicked me ";
-    let div = document.getElementById("message");
-    let button = document.getElementById("clickme");
-    button.onclick = function(){
-        count++;
-        div.innerHTML = message + count + " times!"
+<script defer>
+
+function testFood(food){
+    if (food === "cookies") {
+        alert("More please");
+    } else if (food === "cake") {
+        alert("Yum yum");
     }
-}
+};
+(testFood) ("cookies")
 
 </script>
 </head>
