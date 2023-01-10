@@ -73,6 +73,18 @@ form {
     opacity: 0.7;
 }
 
+.btn.delete {
+    opacity: 0.7;
+    font-size: 1rem;
+ 
+    transition: color 200ms;
+ }
+ 
+.btn.delete:hover {
+   color: var(--clr-warning);
+   opacity: 1;
+}
+
 .new {
     background: transparent;
     border: 0;
@@ -80,8 +92,13 @@ form {
     border-bottom: 1px solid currentColor;
     font-size: inherit;
     outline: none;
+    padding: 0.25rem;
     transition: border-bottom 150ms ease-in;
     order: 2;
+}
+
+.new::placeholder {
+    opacity: .4 ;
 }
 
 .new:focus {
@@ -105,8 +122,8 @@ form {
     color: inherit;
 }
 .new.task::placeholder {
-    color: inherit;
-}
+    color: inherit; 
+ }
 /* end of dicussion */
 
 .task-list {
@@ -241,8 +258,3 @@ form {
     color: var(--clr-light);
 }
 
-.btn.delete {
-   font-weight: 900;
-   letter-spacing: 1px;
-   opacity: 0.8;
-}
