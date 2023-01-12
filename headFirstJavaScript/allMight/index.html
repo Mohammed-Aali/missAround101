@@ -6,62 +6,17 @@
 <title>this page</title>
 <style> button { margin: 10px; } div { padding: 10px }</style>
 <script defer>
-
-function Dog(name, breed, weight) {
-    this.name = name;
-    this.breed = breed;
-    this.weight = weight;
-    this.bark = function() {
-    if (this.weight > 25) {
-    alert(this.name + " says Woof!");
-    } else {
-    alert(this.name + " says Yip!");
-    }
- }
-
+function DogCreation(name, breed) {
+    this.name = name,
+    this.breed = breed
 }
 
-function MakeCars(params) {
-    this.make = params.make;
-    this.model = params.model;
-    this.year = params.year;
-    this.color = params.color;
-    this.passengers = params.passengers;
-    this.convertible = params.convertible;
-    this.mileage = params.mileage;
-    this.started = false, 
-    this.start = function() {
-        this.started = true;
-    }
-    this.stop = function() {
-        this.started = false;
-    }
-    this.drive = function() {
-        if(this.started){
-            console.log(`${this.make} ${this.model} goes whoosh whoosh beeoooo`)
-        } else {
-            console.log(`Turn on ze engine pleaze`);
-        }
-    }
+console.log(DogCreation.prototype)
+let oscar = new DogCreation('oscar', 'mixed')
+oscar.eat = function(){
+    console.log("bring me food this instance");
 }
-
-let limoParms = {
-    make: 'webville moters',
-    model: 'limo',
-    year: 1983,
-    color: 'black',
-    passengers: 12,
-    convertible: true,
-    mileage: 21120
-};
-
-let limo = new MakeCars(limoParms);
-let limoDog = new Dog("Rhapsody in the blue", "Poodle", 40);
-
-console.log(limo.make + " " + limo.model + " is a " + typeof limo)
-console.log(limoDog.name + " is a " + typeof limo);
-
-
+console.log(oscar)
 </script>
 </head>
 <body>

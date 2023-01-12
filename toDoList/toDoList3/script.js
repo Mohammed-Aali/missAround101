@@ -71,7 +71,7 @@ function render() {
 
 function renderTasks(selectedList) {
     selectedList.tasks.forEach(task => {
-
+        const tasksElement = document.importNode(taskTemplate.contentEditable, true)
     })
 }
 
