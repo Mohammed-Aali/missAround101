@@ -6,17 +6,51 @@
 <title>this page</title>
 <style> button { margin: 10px; } div { padding: 10px }</style>
 <script defer>
-function DogCreation(name, breed) {
+function DogCreation(name, breed, weight) {
     this.name = name,
-    this.breed = breed
+    this.breed = breed,
+    this.weight = weight
 }
 
-console.log(DogCreation.prototype)
-let oscar = new DogCreation('oscar', 'mixed')
-oscar.eat = function(){
-    console.log("bring me food this instance");
+DogCreation.prototype.species = "Canine";
+DogCreation.prototype.bark = function() {
+    if(this.weight > 25) {
+        console.log(this.name + " says woof!");
+    } else {
+        console.log(this.name + " says Yip!");
+    }
 }
-console.log(oscar)
+
+DogCreation.prototype.run = function() {
+    console.log("Run!")
+}
+
+DogCreation.prototype.wag = function(){
+    console.log("Wag!")
+}
+
+// Prototype testing
+
+let fido = new DogCreation("fido", "Mixed", 38);
+let fluffy = new DogCreation("Fluffy", "Poodle", 30);
+let spot = new DogCreation("spot", "Chihuahua", 10);
+
+spot.bark = function(){
+    console.log(`${this.name} says WOOF!`)
+}
+
+console.log(fido)
+fido.bark()
+fido.run()
+fido.wag()
+
+fluffy.bark()
+fluffy.run()
+fluffy.wag()
+
+spot.bark()
+spot.run()
+spot.wag()
 </script>
 </head>
 <body>
