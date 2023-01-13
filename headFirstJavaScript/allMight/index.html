@@ -6,51 +6,42 @@
 <title>this page</title>
 <style> button { margin: 10px; } div { padding: 10px }</style>
 <script defer>
-function DogCreation(name, breed, weight) {
+function Robot(name, year, owner) {
     this.name = name,
-    this.breed = breed,
-    this.weight = weight
+    this.year = year,
+    this.owner = owner
 }
 
-DogCreation.prototype.species = "Canine";
-DogCreation.prototype.bark = function() {
-    if(this.weight > 25) {
-        console.log(this.name + " says woof!");
-    } else {
-        console.log(this.name + " says Yip!");
-    }
+Robot.prototype.maker = "ObjectsRUs"
+Robot.prototype.speak = function() {
+    console.log("good morning sir would like a coffee?");
+}
+Robot.prototype.makeCoffee = function() {
+    console.log(`making coffee right now`);
+}
+Robot.prototype.blinkLights = function() {
+    console.log(`OMG im blinking lights`);
 }
 
-DogCreation.prototype.run = function() {
-    console.log("Run!")
+let robby = new Robot("Robby", 1956, "Dr Morbius")
+let rosie = new Robot("Rosie", 1962, "George Jetson")
+
+robby.onOffSwitch = true;
+robby.makeCoffee = function() {
+    console.log(`i run this mofo starbucks now`)
 }
 
-DogCreation.prototype.wag = function(){
-    console.log("Wag!")
+rosie.cleanHouse = function() {
+    console.log(`Im rosie and I can clean more than just your house ;)`)
 }
 
-// Prototype testing
+console.log(`${robby.name} was made by ${robby.maker} in ${robby.year} and is ownded by ${robby.owner}`);
+robby.makeCoffee();
+robby.blinkLights();
 
-let fido = new DogCreation("fido", "Mixed", 38);
-let fluffy = new DogCreation("Fluffy", "Poodle", 30);
-let spot = new DogCreation("spot", "Chihuahua", 10);
+console.log(`${rosie.name} was made by ${rosie.maker} in ${rosie.year} and is owned by ${rosie.owner}`);
+rosie.cleanHouse();
 
-spot.bark = function(){
-    console.log(`${this.name} says WOOF!`)
-}
-
-console.log(fido)
-fido.bark()
-fido.run()
-fido.wag()
-
-fluffy.bark()
-fluffy.run()
-fluffy.wag()
-
-spot.bark()
-spot.run()
-spot.wag()
 </script>
 </head>
 <body>
