@@ -6,29 +6,61 @@
 <title>this page</title>
 <style> button { margin: 10px; } div { padding: 10px }</style>
 <script defer>
-    
-function Robot(name, year, owner) {
+
+function Dog(name, breed, weight) {
  this.name = name;
- this.year = year;
- this.owner = owner;
+ this.breed = breed;
+ this.weight = weight;
 }
-Robot.prototype.maker = "ObjectsRUs";
-Robot.prototype.errorMessage = "All systems go.";
-Robot.prototype.reportError = function() {
- console.log(this.name + " says " + this.errorMessage);
+Dog.prototype.species = "Canine";
+Dog.prototype.bark = function() {
+ if (this.weight > 25) {
+ console.log(this.name + " says Woof!");
+ } else {
+ console.log(this.name + " says Yip!");
+ }
 };
-Robot.prototype.spillWater = function() {
- this.errorMessage = "I appear to have a short circuit!";
+Dog.prototype.run = function() {
+ console.log("Run!");
 };
-var robby = new Robot("Robby", 1956, "Dr. Morbius");
-var rosie = new Robot("Rosie", 1962, "George Jetson");
-rosie.reportError();
-robby.reportError();
-robby.spillWater();
-rosie.reportError();
-robby.reportError();
-console.log(robby.hasOwnProperty("errorMessage"));
-console.log(rosie.hasOwnProperty("errorMessage"));
+Dog.prototype.wag = function() {
+ console.log("Wag!");
+};
+
+function ShowDog(name, breed, weight, handler) {
+ Dog.call(this, name, breed, weight);
+ this.handler = handler;
+}
+
+ShowDog.prototype = new Dog();
+ShowDog.prototype.constructor = ShowDog;
+ShowDog.prototype.league = "Webville";
+ShowDog.prototype.stack = function() { 
+ console.log("Stack");
+};
+ShowDog.prototype.bait = function() {
+ console.log("Bait");
+};
+ShowDog.prototype.gait = function(kind) {
+ console.log(kind + "ing");
+};
+ShowDog.prototype.groom = function() {
+ console.log("Groom");
+};
+
+let fido = new Dog("Fido", "Mixed", 38);
+let fluffy = new Dog("Fluffy", "Poodle", 30)
+let spot = new Dog("Spot", "Chihuahua", 10)
+let scotty = new ShowDog("Scotty", "Scottish Terrier", 15, "Cookie");
+let beatrice = new ShowDog("Beatrice", "Pomeranian", 5, "Hamilton");
+
+fido.bark();
+fluffy.bark();
+spot.bark();
+scotty.bark();
+beatrice.bark();
+scotty.gait("Walk");
+beatrice.groom();
 
 
 
