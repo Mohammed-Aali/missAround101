@@ -7,29 +7,15 @@
 <style> button { margin: 10px; } div { padding: 10px }</style>
 <script defer>
 
-String.prototype.palindrome = function() {
-    let len = this.length-1;
-    for(let i = 0; i <= len; i++) {
-        if(this.charAt(i) !== this.charAt(len-i)) {
-            return false
-        }
-        if (i === (len-i)) {
-            return true
-        }
-    }
-    return true
-}
 
 let phrases = ["eve", "kayak", "mom", "wow", "Not a palindrom"]
 
-for(let i = 0; i < phrases.length; i++) {
-    let phrase = phrases[i]
-    if(phrase.palindrome()) {
-        console.log(`"${phrase}" is a palindrome`)
-    } else {
-        console.log(`"${phrase}" is not a palindrome`)
-    }
-}
+http.createServer(function(request, response) {
+ response.writeHead(200, {"Content-Type": "text/plain"});
+ response.write("Hello World");
+ response.end();
+}).listen(8888);
+
 </script>
 </head>
 <body>
