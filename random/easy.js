@@ -7,6 +7,9 @@ let sumWithInitial = banana.reduce((accumulator, currentValue) => accumulator + 
 
 console.log(sumWithInitial)
 
+
+//the spread operator with the reduce method
+
 const sum = (...args) => args.reduce((a, b) => a + b , 0);
 
 const baseArray = [1, 2, 3, 4, 5]
