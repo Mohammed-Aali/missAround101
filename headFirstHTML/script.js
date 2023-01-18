@@ -14,3 +14,12 @@ while (cans > 0) {
     cans--;
 }
 document.write(lyrics);
+
+bitches = ['maria', 'Ghadeer', "Shahed", 'hannah', 'fatima', 'zainab', 'maha', 'amjad', 'ahed'];
+console.log(bitches);
+let i = bitches.reverse().length - 1;
+while (i > 0) {
+    console.log(`I love you ${bitches[i]} and I'll marry you in the future `)
+    i--;
+}
+
