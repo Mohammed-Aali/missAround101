@@ -23,3 +23,10 @@ while (i < bitches.length) {
     i++;
 }
 
+let count = 0;
+for (let i = 0; i < 5; i++) {
+ count = count + i;
+ console.log(count);
+}
+alert("count is " + count);
+
