@@ -15,18 +15,24 @@
 // }
 // document.write(lyrics);
 
-bitches = ['maria', 'Ghadeer', "Shahed", 'hannah', 'fatima', 'zainab', 'maha', 'amjad', 'ahed'];
-console.log(bitches);
-let i = 0;
-while (i < bitches.length) {
-    console.log(`I love you ${bitches[i]} and I'll marry you in the future `)
-    i++;
-}
+// bitches = ['maria', 'Ghadeer', "Shahed", 'hannah', 'fatima', 'zainab', 'maha', 'amjad', 'ahed'];
+// console.log(bitches);
+// let i = 0;
+// while (i < bitches.length) {
+//     console.log(`I love you ${bitches[i]} and I'll marry you in the future `)
+//     i++;
+// }
 
-let count = 0;
-for (let i = 0; i < 5; i++) {
- count = count + i;
- console.log(count);
-}
-alert("count is " + count);
+// let tops = 5;
+// while (tops > 0) {
+//     for (let spins = 0; spins < 3; spins++) {
+//         console.log("top is spinning");
+//     }
+//     tops--;
+// }
 
+// for(let berries = 5; berries > 0; berries--) {
+//     console.log(berries);
+// }
+
+document.getElementById("green-planet");
