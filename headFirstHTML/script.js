@@ -35,4 +35,19 @@
 //     console.log(berries);
 // }
 
-document.getElementById("green-planet");
+function init() 
+        {
+        let tempByHour = [59.2, 60.1, 63, 65, 62]
+        for (let i = 0, n = tempByHour.length; i < n; i++) {
+            let theTemp = tempByHour[i];
+            let id = `temp${[i]}`
+            let liElement = document.getElementById(id)
+            if (i == 0) {
+                liElement.innerHTML = "the tempreture at none was " + theTemp
+            } else {
+                liElement.innerHTML = `the temperature at ${i} was ${theTemp}`
+            }
+        }
+        }
+        window.onload = init;
+    
