@@ -35,19 +35,17 @@
 //     console.log(berries);
 // }
 
-function init() 
+function makePhrases() 
         {
-        let tempByHour = [59.2, 60.1, 63, 65, 62]
-        for (let i = 0, n = tempByHour.length; i < n; i++) {
-            let theTemp = tempByHour[i];
-            let id = `temp${[i]}`
-            let liElement = document.getElementById(id)
-            if (i == 0) {
-                liElement.innerHTML = "the tempreture at none was " + theTemp
-            } else {
-                liElement.innerHTML = `the temperature at ${i} was ${theTemp}`
-            }
+        let words1 = ["24/7", "multi-Tier", "30,000 feet", "B-to-B", "win-win"];
+        let words2 = ["empowered", "value-added", "oriented", "focused", "aligned"];
+        let words3 = ["process", "solution", "tipping-point", "strategy", "vision"];
+        let rand1 = Math.floor(Math.random() * words1.length);
+        let rand2 = Math.floor(Math.random() * words2.length);
+        let rand3 = Math.floor(Math.random() * words3.length);
+        let phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
+        let phraseElement = document.getElementById("phrase");
+        phraseElement.innerHTML = phrase
         }
-        }
-        window.onload = init;
+        window.onload = makePhrases;
     
