@@ -1,19 +1,31 @@
-body {
-	font-family: sans-serif;
-}
-
-h1, h2 {    
-	color: gray;
-}
-
-h1 { 
+* {
+	margin:     0;
+	padding:    0;
+	box-sizing: border-box;
+  }
+  body {
+	margin-left:  20%;
+	margin-right: 20%;
+  font-family: sans-serif;
+  }
+  a {
+	text-decoration: none;
+  }
+  p {
+	color:     maroon;
+  }
+  h1 {
 	border-bottom: 1px solid black;
-}
-
-p {
-	color: maroon;
-}
-
-p.greentea {
-	color: green;
-}
+  }
+  h1, h2 {
+	color:     gray;
+  }
+  .blueberry {
+    color: purple;
+  }
+  .greentea {
+    color: green;
+   }
+  .raspberry {
+    color: blue;
+  }
