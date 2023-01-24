@@ -1,17 +1,21 @@
-const addButton = document.getElementById("addButton");
-const songTextInput = document.getElementById("songTextInput");
-console.log(songTextInput)
 
+function init() {
+        const addButton = document.getElementById("addButton");
+        addButton.addEventListener("click", handleButtonClick)
+        loadPlayList()
+}
 
-
-
-
-
-
-
-
-addButton.addEventListener("click", handleButtonClick)
 
 function handleButtonClick() {
-        alert("button was clicked!")
+        const songTextInput = document.getElementById("songTextInput");
+        const li = document.createElement("li");
+        const ul = document.getElementById("playList")
+        songName = songTextInput.value;
+        if (songName === "") {
+        return alert("Please enter a value first");
+        }
+        li.innerHTML = songName;
+        ul.appendChild(li);
+        save(songName);
 }
+
