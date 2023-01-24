@@ -6,37 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            margin-left: 20%;
-            margin-right: 20%;
-            background: gray;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        h1 {
-            padding: 1rem 0;
-            text-align: center;
-        }
-        main > div {
-            text-align: center;
-        }
-    </style>
-    <title>HeadFirstHTMLProgramming</title>
+    <title>Webville Tunes</title>
 </head>
 <body>
-<header id="header">
-    <h1>Phrase-o-Matic says:</h1>
+<header>
+    <h1>Add a new song:</h1>
 </header>
 
 
 
 <main>
-    <div id="phrase"></div>
+
+<form>
+    <input 
+    type="text" 
+    id="songTextInput" 
+    size="35"
+    placeholder="Song Name??">
+    <input
+    type="button"
+    id="addButton" 
+    value="Add Song">
+</form>
+
+    <ul id="playList"></ul>
+
 </main>
 
 
