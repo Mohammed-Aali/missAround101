@@ -1,31 +1,32 @@
 function save(item) {
-    let playListArray = getStoreArray("playList")
-    playListArray.push(item)
-    localStorage.setItem("playList", JSON.stringify("playListArray"))
-}
+    let playlistArray = getStoreArray("playlist");
+    playlistArray.push(item);
+    localStorage.setItem("playlist", JSON.stringify(playlistArray));
+   }
 
-function loadPlayList() {
-    let playListArray = getSavedSongs();
-    let ul = document.getElementById("playList");
-    if (playListArray != null) {
-        for (let i = 0; i < playListArray.length; i++) {
-            let li = document.createElement("li");
-            li.innerHTML = playListArray[i];
-            ul.appendChild(li);
-        }
+function loadPlaylist() {
+    let playlistArray = getSavedSongs();
+    let ul = document.getElementById("playlist");
+    if (playlistArray != null) {
+    for (let i = 0; i < playlistArray.length; i++) {
+    let li = document.createElement("li");
+    li.innerHTML = playlistArray[i];
+    ul.appendChild(li);
     }
+  }
 }
 
 function getSavedSongs() {
-    return getStoreArray("playList")
+    return getStoreArray("playlist");
 }
 
 function getStoreArray(key) {
-    let playListArray = localStorage.getItem(key);
-    if (playListArray == null || playListArray == "") {
-        playListArray = new Array();
-    } else {
-        playListArray = JSON.parse(playListArray);
+    let playlistArray = localStorage.getItem(key);
+    if (playlistArray == null || playlistArray == "") {
+    playlistArray = new Array();
     }
-    return playListArray;
+    else {
+    playlistArray = JSON.parse(playlistArray);
+    }
+    return playlistArray;
 }
