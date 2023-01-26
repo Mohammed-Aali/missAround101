@@ -12,10 +12,10 @@ h2 {
 h1, h2 {
     color: #007e7e;
 }
-.guarentee {
-    border-color: black;
+#guarentee {
+    border-color: white;
     border-width: 1px;
-    border-style: solid;
+    border-style: dashed;
     background-color: #a7cece;
     color: #444;
     font-family: 'Times New Roman', Times, serif;
@@ -23,7 +23,7 @@ h1, h2 {
     padding: 1.5rem;
     padding-left: 5.5rem;
     margin: 2rem;
-    margin-right: 12rem;
+    margin-right: 250px;
     line-height: 1.9rem;
     background-image: url("images/background.gif");
     background-repeat: no-repeat;
