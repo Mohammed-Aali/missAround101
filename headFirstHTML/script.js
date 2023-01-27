@@ -1,6 +1,15 @@
-function addOne(one) {
-        return one + 1;
+let dog = {
+        weight: 90,
+        name: "fido",
+        breed: "mixed",
+        loves: ["walking", "fetching balls"]
 }
-let plusOne = addOne;
+let fido = dog;
 
-console.log(plusOne(68))
+loseWeight(fido)
+
+function loseWeight(dog) {
+        let newWeight;
+        newWeight = dog.weight - 10
+        console.log(newWeight)
+}
