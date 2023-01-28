@@ -5,6 +5,14 @@ body {
   margin:           0px;
 }
 
+div#tableContainer {
+  display: table;
+}
+
+div#tableRow {
+  display: table-row;
+}
+
 #header {
   background-color: #675c47;
   margin:           10px;
@@ -12,17 +20,23 @@ body {
 }
 
 #main {
+  display: table-cell;
   background:       #efe5d0 url(images/background.gif) top left;
   font-size:        105%;
   padding:          15px;
-  margin:           0px 10px 10px 10px;
+  margin:           0px 330px 10px 10px;
 }
 
 #sidebar {
+  display: table-cell;
   background:       #efe5d0 url(images/background.gif) bottom right;
   font-size:        105%;
   padding:          15px;
   margin:           0px 10px 10px 10px;
+  position: absolute;
+  top: 128px;
+  right: 0;
+  width: 280px;
 }
 
 #footer {
