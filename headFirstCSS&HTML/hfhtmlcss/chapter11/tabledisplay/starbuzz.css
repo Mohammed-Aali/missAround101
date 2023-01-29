@@ -19,6 +19,28 @@ body {
   height:           108px;
 }
 
+#award {
+  position: absolute;
+  top: 30px;
+  left: 365px;
+}
+
+#headerSlogan {
+  float: right;
+}
+#headerLogo {
+  float: left;
+}
+
+#coupon {
+  position: fixed;
+  top: 350px;
+  left: -90px;
+}
+#coupon a, #coupon img {
+  border: none;
+}
+
 #drinks {
   display: table-cell;
   background-color: #efe5d0;
