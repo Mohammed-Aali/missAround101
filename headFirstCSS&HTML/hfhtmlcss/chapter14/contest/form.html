@@ -5,13 +5,17 @@
     <title>Enter the Contest</title>
   </head>
   <body>
-    <form action="http://wickedlysmart.com/hfhtmlcss/contest.php" method="POST">
-      <p>Just type in your name (and click Submit) to enter the contest:<br>
-
-        First name: <input type="text" name="firstname" value=""><br>
-        Last name:  <input type="text" name="lastname" value=""><br>
-        <input type="submit">
-      </p>
+    <form>
+      <div>
+      <label for="beans"> Choose Your Beans:
+        <select name="beans">
+          <option value="HouseBlend">House Blend</option>
+          <option value="ShadeGrownBoliviaSupremo">Shade Grown Bolivia Supremo</option>
+          <option value="OrganicGuatemala">Organic Guatemala</option>
+          <option value="Kenya">Kenya</option>
+        </select>
+      </label>
+      </div>
     </form>
   </body>
 </html>
