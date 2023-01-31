@@ -65,3 +65,7 @@ let banzaiMovie = new Movie("Buckaroo Banzai", "Cult Classic", 5, ["1:00pm", "5:
 let plan9Movie = new Movie("Plan 9 from Outer Space", "Cult Classic", 2, ["3:00pm", "7:00pm", "11:00pm"]);
 
 console.log(plan9Movie.getNextShowing())
+
+function degreeToDecimal(degree, minutes, seconds) {
+    return degree + (minutes / 60.0 ) + (seconds / 3600.0)
+}
