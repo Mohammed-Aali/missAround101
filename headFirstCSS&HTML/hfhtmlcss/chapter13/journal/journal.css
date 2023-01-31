@@ -52,3 +52,13 @@ caption {
 .cellColor {
   background-color: #fcba7a;
 }
+.blue {
+  background-color: lightblue;
+}
+table table th, table table tr{
+  background-color: pink;
+}
+li {
+  list-style-image: url(images/backpack.gif);
+  list-style-position: inside;
+}
