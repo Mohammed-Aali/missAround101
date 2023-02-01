@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>The Starbuzz Bean Machine</title>
+    <link rel="stylesheet" href="form.css">
   </head>
   <body>
 
     <h1>The Starbuzz Bean Machine</h1>
     <h2>Fill out the form below and click submit to order</h2>
     <form action="http://starbuzzcoffee.com/processorder.php" method="post">
-    
+    <div class="tableRow">
     <p>
       Choose your beans:
       <select name="beans">
@@ -19,25 +20,32 @@
         <option value="Kenya">Kenya</option>
       </select>
     </p>
+    </div>
 
+    <div class="tableRow"></div>
     <p> Type: <br>
       <input type="radio" name="beantype" value="whole"> Whole beans <br>
       <input type="radio" name="beantype" value="ground" checked> Ground
     </p>
     
+    <div class="tableRow"></div>
     <p>
       Number of Bags: <input type="number" name="bags" min="1" max="10">
     </p>
+
+    <div class="tableRow"></div>
     <p>
       Must arrive by date: <input type="date" name="date">
     </p>
 
+    <div class="tableRow"></div>
     <p>
       Extras: <br>
       <input type="checkbox" name="extras[]" value="giftwrap">Gift wrap <br>
       <input type="checkbox" name="extras[]" value="catalog" checked> Include catalog
     </p>
 
+    <div class="tableRow"></div>
     <p>
       Name: <input type="text" name="name"> <br>
       Address: <input type="text" name="address"> <br>
@@ -47,11 +55,13 @@
       Phone: <input type="tel" name="phone"> <br>
     </p>
 
+    <div class="tableRow"></div>
     <p>
       Customer Comments: <br>
       <textarea name="comments"></textarea>
     </p>
     
+    <div class="tableRow"></div>
     <p>
       <input type="submit" value="Order Now">
     </p>
