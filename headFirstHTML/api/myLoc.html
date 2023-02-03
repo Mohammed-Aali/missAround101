@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Add Map</title>
+    <title>Where ever you go there U R</title>
     <style>
     * {
         margin: 0;
@@ -13,13 +13,15 @@
     width: 100%; /* The width is the  width of the web page */
     }
     </style>
-    <script defer src="myLoc.js"></script>
+    <script defer src="myLocation.js"></script>
   </head>
   <body>
-    <h3>My Google Maps Demo</h3>
-    <!--The div element for the map -->
+    <form>
+      <input type="button" id="watch" value="watch me">
+      <input type="button" id="clearWatch" value="Clear watch">
+    </form>
     <div id="location"></div>
     <div id="distance"></div>
-
+    <div id="map"></div>
   </body>
 </html>
