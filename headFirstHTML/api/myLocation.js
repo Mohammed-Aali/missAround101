@@ -1,25 +1,35 @@
-function showCoords() {
+function getMyLocation() {
     if ('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition((position) => {
-            let latitude = position.coords.latitude
-            let longitude = position.coords.longitude
-            let div = document.getElementById("location")
-
-            div.innerText = `You are at latitude ${latitude}, ${longitude} (with ${position.coords.accuracy} meters accuracey)`
-        }, error, options)
+       navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack, options)
     } else {
         alert(`Oops, no support for GeoLocation`)
     }
 }
 
-window.onload = showCoords;
-let error = (error) => {
-    console.log(error)
+function successCallBack(position) {
+    let latitude = position.coords.latitude
+    let longitude = position.coords.longitude
+    const div = document.querySelector("#location")
+
+    div.innerHTML = `this is my current postions latitude ${latitude} and longitude ${longitude}.
+    the position was found in ${options.timeout} miliseconds`
+}
+
+function errorCallBack(error) {
+    const div = document.querySelector("#location")
+    div.innerHTML = error.message
+
+    options.timeout += 100;
+    navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack, options)
+    div.innerHTML+= `checking again with timeout = ${options.timeout}`
+    console.log(error.message)
 }
 
 
 let options = {
     enableHighAccurecy: true,
-    maximumAge: 3000,
-    timeout: 5000
+    maximumAge: 0,
+    timeout: 0.000001
 }
+
+getMyLocation()

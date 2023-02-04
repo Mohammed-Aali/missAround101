@@ -7,7 +7,8 @@ let ourCoords = {
 
 function getMyLocation() {
     if(navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(displayLocation, displayError)
+        const watchButton = document.querySelector("#watch");
+        console.log(watchButton)
     } else {
         alert("Oops, No geolocation support");
     }
@@ -40,7 +41,6 @@ function displayLocation(position) {
     let km = computeDistance(position.coords, ourCoords);
     let distance = document.getElementById("distance");
     distance.innerHTML = `You are ${km} KM away form WickedlySmart HQ`;
-
     showMap(position.coords);
 }
 
