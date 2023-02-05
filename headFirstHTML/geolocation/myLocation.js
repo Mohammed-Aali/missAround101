@@ -18,18 +18,21 @@ function successCallBack(position) {
 function errorCallBack(error) {
     const div = document.querySelector("#location")
     div.innerHTML = error.message
-
-    options.timeout += 100;
+    if(error.code == 1) {
+        console.log(error.message)
+    } else {
     navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack, options)
+
     div.innerHTML+= `checking again with timeout = ${options.timeout}`
-    console.log(error.message)
+    }
+    
 }
 
 
 let options = {
     enableHighAccurecy: true,
     maximumAge: 0,
-    timeout: 0.000001
+    timeout: 100
 }
 
-getMyLocation()
+window.onload = getMyLocation;
