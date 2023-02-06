@@ -1,0 +1,13 @@
+.salesItem {
+    font-size: 1.125rem;
+    text-align: center;
+}
+.salesItem:nth-child(odd) {
+    background-color: lightgray;
+}
+div#sales {
+    border: solid lightgray 0.5px;
+    border-radius: 5px;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}

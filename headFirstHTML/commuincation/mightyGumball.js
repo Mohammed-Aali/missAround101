@@ -1,16 +1,10 @@
-window.onload = () => {
-    let url = "data.json"
-    let requst = new XMLHttpRequest()
-    requst.open("get", url)
-    requst.onload = () => {
-        if (requst.status == 200) {
-            updateSales(requst.responseText)
-        }
-    }
-    requst.send(null);
-}
-
-function updateSales(responseText){
+function updateSales(sales){
     let salesDiv = document.getElementById("sales");
-    salesDiv.textContent = responseText;
+    for (let i = 0; i < sales.length; i++){
+        let sale = sales[i];
+        let div = document.createElement("div")
+        div.setAttribute("class", "salesItem");
+        div.innerText = `${sale.name} sold ${sale.sales} gumballs`
+        salesDiv.appendChild(div);
+    }
 }
