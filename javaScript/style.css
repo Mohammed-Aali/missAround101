@@ -7,6 +7,22 @@ h1 {
     padding: 1em 1em;
     text-align: left;
 }
+button#button {
+    font-size: 0.75rem;
+    color: white;
+    border: solid 0.5px black;
+    border-radius: 3px;
+    padding: 0.150rem;
+    background-color: black;
+}
+button#button:hover {
+    background-color: darkblue;
+    font-size: 1rem;
+}
+button#button:focus {
+    background-color: lightpink;
+}
+
 div#container {
     display: flex;
     flex-direction: column;

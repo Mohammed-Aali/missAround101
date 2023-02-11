@@ -10,6 +10,7 @@
 // console.log(document.forms[0])
 // console.log(document.links)
 
+
 // selectors
 
 // get element by id
@@ -226,4 +227,16 @@
 // header.insertBefore(newDiv, header2);
 
 // console.log(newDiv)
+const button = document.querySelector("button").addEventListener('click', buttonClick)
+let counter = 0;
 
+function buttonClick(event) {
+    // document.querySelector("#header-title").textContent = 'Changed'
+    // document.querySelector("#main-header").style.backgroundColor = "gray"
+    counter++;
+    document.querySelector("#output").innerHTML = `<h3>the button has been clicked ${counter}</h3>`
+
+    console.log(event.target)
+    console.log(event.target.id)
+    console.log(event.target.classList)
+}
