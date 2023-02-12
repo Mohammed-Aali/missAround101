@@ -7,6 +7,19 @@ h1 {
     padding: 1em 1em;
     text-align: left;
 }
+header#main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input#filter {
+    font-size: small;
+    margin-right: 1rem;
+    padding-right: 1rem;
+}
+ 
 button#button {
     font-size: 0.75rem;
     color: white;
