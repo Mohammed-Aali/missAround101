@@ -227,16 +227,56 @@
 // header.insertBefore(newDiv, header2);
 
 // console.log(newDiv)
-const button = document.querySelector("button").addEventListener('click', buttonClick)
-let counter = 0;
 
-function buttonClick(event) {
+
+//event object
+// const button = document.querySelector("button").addEventListener('click', buttonClick)
+// let counter = 0;
+
+// function buttonClick(event) {
     // document.querySelector("#header-title").textContent = 'Changed'
     // document.querySelector("#main-header").style.backgroundColor = "gray"
-    counter++;
-    document.querySelector("#output").innerHTML = `<h3>the button has been clicked ${counter}</h3>`
+    // console.log("x" + event.clientX)
+    // console.log("y" + event.clientY)
 
-    console.log(event.target)
-    console.log(event.target.id)
-    console.log(event.target.classList)
+    // console.log("x" + event.offsetX)
+    // console.log("y" + event.offsetY)
+
+    // console.log(event.altKey);
+    // console.log(event.ctrlKey);
+    // console.log(event.shiftKey);
+// }
+
+// const button = document.querySelector("button")
+// const box = document.querySelector("#box");
+// // button.addEventListener("click", runEvent)
+// // button.addEventListener("dblclick", runEvent)
+// // button.addEventListener("mousedown", runEvent)
+// // button.addEventListener("mouseup", runEvent)
+// // box.addEventListener("mouseenter", runEvent);
+// // box.addEventListener("mouseleave", runEvent);
+// let p = document.createElement('p')
+// p.style.fontSize = "2rem";
+// p.innerHTML = "Hello"
+// box.appendChild(p)
+// // // box.addEventListener("mouseover", runEvent);
+// // box.addEventListener("mouseout", runEvent);
+// box.addEventListener("mousemove", runEvent);
+
+const input = document.querySelector(`input[type="text"]`)
+const form = document.querySelector(`form`);
+const select = document.querySelector(`select`);
+// input.addEventListener("keypress", runEvent)
+// input.addEventListener("focus", runEvent)
+// input.addEventListener("blur", runEvent)
+
+// input.addEventListener("cut", runEvent)
+// input.addEventListener("paste", runEvent)
+select.addEventListener("change", runEvent)
+
+function runEvent(event){
+    console.log('Event Type: ' + event.type);
+    // document.body.style.display = "none"
+    // console.log(event.target.value)
+    // document.querySelector("#output").innerHTML = `<h3>${event.target.value}</h3>`
 }
