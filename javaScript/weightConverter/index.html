@@ -18,7 +18,7 @@
 <div class="container">
     <div class="row d-flex justify-content-center">
         <div class="col-md-6">
-            <h1 style="color:black; font-weight: 500;" class="display-3 text-center mb-3">
+            <h1 style="color:white; font-weight: 500;" class="display-3 text-center mb-3">
                 Weight Converter
             </h1>
             <div class="row mb-3">
@@ -31,13 +31,13 @@
             </div>
             <form>
                 <div class="form-group">
-                    <input id="input" type="number" class="form-control form-control-lg mb-3 text-center" placeholder="Please choose unit first..">
+                    <input id="input" type="number" class="form-control form-control-lg mb-3 text-center" placeholder="Please write number..">
                 </div>
             </form>
             <div id="output">
-                <div class="card bg-primary mb-1">
+                <div id="gCard" class="card bg-primary mb-1">
                     <div class="card-body">
-                        <h4 >Grams:</h4>
+                        <h4>Grams:</h4>
                         <div id="gramsOutput"></div>
                     </div>
                 </div>
@@ -49,14 +49,14 @@
                     </div>
                 </div>
 
-                <div class="card bg-success mb-1">
+                <div id="ounceCard" class="card bg-success mb-1">
                     <div class="card-body">
                         <h4>Ounces:</h4>
                         <div id="ounceOutput"></div>
                     </div>
                 </div>
 
-                <div class="card bg-light mb-1">
+                <div id="lpCard" class="card bg-light mb-1">
                     <div class="card-body">
                         <h4>Pounds:</h4>
                         <div id="poundOutput"></div>
@@ -75,11 +75,11 @@
     // grap the kg button
     const kgBtn = document.querySelector("#kgBtn");
     // grap the ounce button
-    const ounceBtn = document.querySelector("#ounceBtn");
+    const ounce = document.querySelector("#ounceBtn");
     // grap the pound button
-    const lb = document.querySelector("#lbBtn");
+    const lbBtn = document.querySelector("#lbBtn");
     // grap the gram button
-    const g = document.querySelector("#gBtn");
+    const gBtn = document.querySelector("#gBtn");
     // grap the input
     const input = document.querySelector('#input');
     // grab grams card
@@ -88,24 +88,56 @@
     const kg = document.querySelector("#kgOutput");
     // grab the ounces card
     const ounces = document.querySelector("#ounceOutput");
+    // grab the pound out
+    const lp = document.querySelector("#poundOutput");
 
     // adding an event listener to kgBtn
     kgBtn.addEventListener("click", event => {
         input.placeholder = "Enter Kilograms.."
         output.style.visibility = "visible";
+        document.querySelector("#lpCard").style.display = "block";
+        document.querySelector("#ounceCard").style.display = "block";
         document.querySelector("#kgCard").style.display = "none";
+        document.querySelector("#gCard").style.display = "block";
+        lp.innerHTML = (input.value * 2.2).toFixed(2);
+        grams.innerHTML = (input.value * 1000).
+        ounces.innerHTML = (input.value * 35)
     })
     // adding an event listener to ounceBtn
     ounceBtn.addEventListener("click", event => {
         input.placeholder = "Enter Ounces.."
+        output.style.visibility = "visible";
+        document.querySelector("#gCard").style.display = "block";
+        document.querySelector("#ounceCard").style.display = "none";
+        document.querySelector("#kgCard").style.display = "block";
+        document.querySelector("#lpCard").style.display = "block";
+        kg.innerHTML = (input.value * 0.03).toFixed(2)
+        lp.innerHTML = (input.value * 0.063).toFixed(2);
+        grams.innerHTML = (input.value * 28)
     })
     // adding an event listener to lbBtn
     lbBtn.addEventListener("click", event => {
         input.placeholder = "Enter Pounds..";
+        output.style.visibility = "visible";
+        document.querySelector("#gCard").style.display = "block";
+        document.querySelector("#lpCard").style.display = "none";
+        document.querySelector("#kgCard").style.display = "block";
+        document.querySelector("#ounceCard").style.display = "block";
+        kg.innerHTML = (input.value * 0.45).toFixed(2)
+        grams.innerHTML = (input.value * 453.592).toFixed(2);
+        ounces.innerHTML = (input.value * 16)
     })
     // adding an event listener to gBtn
     gBtn.addEventListener("click", event => {
         input.placeholder = "Enter Grams..";
+        output.style.visibility = "visible";
+        document.querySelector("#gCard").style.display= "none";
+        document.querySelector("#lpCard").style.display = "block"; 
+        document.querySelector("#kgCard").style.display = "block";
+        document.querySelector("#ounceCard").style.display = "block";
+        kg.innerHTML = (input.value / 1000)
+        lp.innerHTML = (input.value / 453.592).toFixed(2);
+        ounces.innerHTML = (input.value * 0.03527396195).toFixed(2)
     })
     
 </script>
