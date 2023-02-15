@@ -55,6 +55,7 @@ const age = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // console.log(retials1);
 
 //filter all the companies from the eighties
+
 // const eighties = companeis.filter(company => company.start < 1990 && company.start >= 1980);
 // console.log(eighties)
 
@@ -73,10 +74,63 @@ const age = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // const companyName = companeis.map(company => `${company.name} [${company.start} - ${company.end}]`)
 // console.log(companyName);
 
-const agesSquare = age.map(age => Math.sqrt(age))
-const agestimesTwo = age.map(age => age * 2)
-console.log(agestimesTwo);
+// map is the king of creating new array and missing with them
+// const agesSquare = age
+//     .map(age => age + 1.5)
+//     .map(age => age * 2)
+// console.log(agesSquare);
 
 
 // sort
+
+// sorting companies by start year
+// const sortedCompanies = companeis.sort(function(company1, company2) {
+//     if(company1.start > company2.start) {
+//         return 1;
+//     } else {
+//         return -1;
+//     }
+// })
+// sorting copanies the crazy short way
+// const sortedCompanies1 = companeis.sort((a, b) => (a.start > b.start ? 1 : -1))
+
+// console.log(sortedCompanies1)
+// // sort ages
+// // normal crazy short way of doing it
+// const ageSorted = age.sort((a, b) => a > b ? 1 : -1);
+// // even shorter than crazy short 
+// const ageSortUp = age.sort((a, b) => a - b);
+// console.log(ageSorted)
+// console.log(ageSortUp)
+
 // reduce
+//normal for loop
+// let ageSum = 0;
+// for(let i = 0; i < age.length; i++) {
+//     ageSum+= age[i];
+// }
+
+// normal length
+// const ageSum = age.reduce(function(total, age) {
+//     return total + age;
+// }, 0)
+// // crazy short length
+// const ageSum1 = age.reduce((total, age) => total + age, 0);
+
+// get total years for all companies
+// const totalYears = companeis.reduce(function(total, company) {
+//     return total + (company.end - company.start)
+// }, 0)
+
+// doing it the crazy short way
+// const totalYears1 = companeis.reduce((total, company) => total + (company.end - company.start), 0);
+
+// combine methods
+
+const combine = age
+    .map(age => age * 2)
+    .filter(age => age >= 40)
+    .sort((a, b) => a - b)
+    .reduce((total, age) => total + age, 0);
+
+console.log(combine)
