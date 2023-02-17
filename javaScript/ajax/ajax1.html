@@ -9,7 +9,7 @@
 <body>
     <button id="button">Get text file</button>
     <div id="text"></div>
-    
+
 <script>
     //create an event listener
     document.getElementById("button").addEventListener("click", loadText)
@@ -18,15 +18,17 @@
         // create the xhr object
         let xhr = new XMLHttpRequest();
         // open - type , ulr/file. async
-        xhr.open("GET", 'sample.txt', true)
+        xhr.open("GET", 'sample2.txt', true)
         console.log("readystate = " + xhr.readyState)
 
         //kind of the new way of doing things
         xhr.onload = function() {
             // if the xhr request is OK
-            if(this.status == 200) {
-                document.getElementById("text").innerHTML = xhr.responseText
 
+            if(this.status == 200) {
+                document.getElementById("text").innerHTML = this.responseText
+            } else if (this.status == 404) {
+                document.getElementById("text").innerHTML = "Not found"
             }
         }
 
@@ -34,7 +36,6 @@
         xhr.onprogress = function() {
             console.log("readystate = " + xhr.readyState)
         }
-
         //on error handeler
         xhr.onerror = function() {
             console.log("request erorr");
@@ -44,7 +45,7 @@
         //     console.log("readystate = " + xhr.readyState)
         //     if(this.readyState == 4 && xhr.status == 200) {
         //         console.log(this.responseText)
-        //     }
+        //     }l
         // }
 
         // sends request
