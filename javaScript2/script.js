@@ -1,4 +1,12 @@
-let grades = [30, 30, 12, 23];
+{
+    let slicesOfPizzas = 10;
+    // assignment happens before increment;
+    // let newPizza = slicesOfPizzas++;
+    // // assignment happens after we increment;
+    // //let newPizza = ++slicesOfPizzas;
+    // console.log("slices of pizza:",slicesOfPizzas)
+    // console.log("new pizza: ", newPizza)
 
-//premitives
-// all are object if not premetives;
+    slicesOfPizzas *= 5;
+    console.log(slicesOfPizzas)
+}
