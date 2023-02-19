@@ -16,3 +16,4 @@
   print()
   position.print()
 }
+let x = test;
