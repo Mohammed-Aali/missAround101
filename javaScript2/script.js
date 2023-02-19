@@ -1,8 +1,5 @@
 {
-   let input = Number(prompt("put in a DECIMAL number yo: ")) 
-   console.log("in decimal to decimal: ", input)
-   console.log("in decimal to binary: ", input.toString(2))
-   console.log("in decimal to octal: ", input.toString(8))
-   console.log("in decimal to hex: ", input.toString(16))
-  
-}
+  let content = "\t\nToday is the day we as human race made the choice to stand togother and fight along side each other";
+
+  console.log(content.split(" "))
+} 
