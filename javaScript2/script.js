@@ -1,10 +1,10 @@
 {
-  let name = prompt()
-  if(name === "Mohammed") { // identity operator // strict equality
-    console.log("Welcome")
-  } else if (name === "sally") {
-    console.log("Welcome")
-  } else {
-    console.log("you are not wlecome")
+  let d = document.getElementById("destination");
+  for(let i = 0; i < 10; i++) {
+    for(let j = i; j >= 0; j--){
+      d.append(j + " ")
+    }
+    let br = document.createElement("br")
+    d.appendChild(br)
   }
 }
