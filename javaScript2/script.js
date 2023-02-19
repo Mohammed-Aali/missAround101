@@ -1,5 +1,18 @@
 {
-  let content = "\t\nToday is the day we as human race made the choice to stand togother and fight along side each other";
+  let position = {
+    x: 10,
+    y: 20,
+    print: function() {
+      console.log(`X: ${this.x}, Y: ${this.y}`)
+    },
+    myObject: {sweet: "hello"}
+  }
 
-  console.log(content.split(" "))
-} 
+  function print() {
+    "use strict";
+    console.log(this)
+  }
+
+  print()
+  position.print()
+}
