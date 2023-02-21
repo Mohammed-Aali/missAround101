@@ -14,6 +14,7 @@ function largest(x, ...extra){
   {
     extra[i] > largest ? largest = extra[i] : largest;
   }
+  return largest;
 }
 
-console.log(pow(3, 3, 4, 6, 3, 4))
+console.log(largest(3, 3, 4, 6, 9, 4, 9, 99))
