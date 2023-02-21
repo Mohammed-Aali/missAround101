@@ -12,11 +12,8 @@ let mathFunction = {
   power: pow
 }
 
-pow.description = "i love banana"
-console.log(pow.description)
-
-function returnFunction(func) {
-  return func;
+function returnFunction() {
+  return pow;
 }
 
-console.log(callBack(pow))
+console.log(returnFunction()(10, 5))
