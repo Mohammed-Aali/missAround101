@@ -11,3 +11,5 @@ function pow(x, y) {
 
 pow(3, 3);
 pow(3, 3);
+pow(10, 3);
+pow(6, 2);
