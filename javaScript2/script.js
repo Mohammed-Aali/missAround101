@@ -9,4 +9,5 @@ function pow(x, y) {
   return total;
 }
 
-pow(8, 9);
+pow(3, 3);
+pow(3, 3);
