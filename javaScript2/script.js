@@ -1,4 +1,4 @@
-pow.calculated = []
+pow.calculated = {};
 function pow(x, y) { 
   let stringVersion = x + "^" + y;
   console.log(`string version ${stringVersion}`)
@@ -6,7 +6,8 @@ function pow(x, y) {
   for(let i = 0; i < y; i++) {
     total *= x;
   }
-  pow.calculated.push(total)
+  //pow.calculated.push(total)
+  pow.calculated.stringVersion = total;
   console.log(pow.calculated)
   return total;
 }
