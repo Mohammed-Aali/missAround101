@@ -1,5 +1,7 @@
 //default
 function pow(x, y = 2, ...extra) { 
+  console.log(this)
+  console.log(arguments)
   console.log(extra);
   let total = 1; 
   for(let i = 0; i < y; i++) {
@@ -18,3 +20,4 @@ function largest(x, ...extra){
 }
 
 console.log(largest(3, 3, 4, 6, 9, 4, 9, 99))
+pow(2, 4)
