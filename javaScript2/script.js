@@ -1,5 +1,6 @@
-function pow(x, y) { 
-  y = typeof y === "undefined" ? 2 : y;
+//default
+function pow(x, y = 2, ...extra) { 
+  console.log(extra);
   let total = 1; 
   for(let i = 0; i < y; i++) {
     total *= x;
@@ -7,4 +8,4 @@ function pow(x, y) {
   return total;
 }
 
-console.log(pow(3))
+console.log(pow(3, 3, 4, 6, 3, 4))
