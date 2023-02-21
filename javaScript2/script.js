@@ -3,6 +3,7 @@ function pow(x, y) {
   for(let i = 0; i < y; i++) {
     total *= x;
   }
+  return total;
 }
 
 console.log(pow())
