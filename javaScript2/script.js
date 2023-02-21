@@ -1,7 +1,7 @@
 pow.calculated = {};
 function pow(x, y) { 
   let stringVersion = x + "^" + y;
-  console.log(`string version ${stringVersion}`)
+  console.log(`string version ` + stringVersion)
   let total = 1; 
   for(let i = 0; i < y; i++) {
     total *= x;
