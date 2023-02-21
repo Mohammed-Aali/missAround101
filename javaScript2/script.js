@@ -1,5 +1,8 @@
 {
-  let ages = [["mohammed", 12, 13, 14], ["ali", 88, 10, 0], ["haneen", 50, 90, 99]]
-  console.log(ages[0][2])
+  let before = new Date(2023, 0, 25);
+  let after = new Date(2023, 1, 20);
 
+  let oneDay = 1000 * 60 * 60 * 24;
+  let time = (after - before) / oneDay
+  console.log(time)
 }
