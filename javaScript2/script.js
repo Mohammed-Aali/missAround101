@@ -1,4 +1,4 @@
-function pow(x, y) { 
+function pow(x, y = 2) { 
   let total = 1; 
   for(let i = 0; i < y; i++) {
     total *= x;
@@ -6,5 +6,4 @@ function pow(x, y) {
   return total;
 }
 
-console.log(pow())
-console.log(pow(1,2,3,4,5))
+console.log(pow(3))
