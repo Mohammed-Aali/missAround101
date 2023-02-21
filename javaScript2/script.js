@@ -6,6 +6,7 @@ function pow(x, y) {
     console.log("Found");
     return pow.calculated[stringVersion];
   }
+  console.log("CALCULATING: ")
   let total = 1; 
   for(let i = 0; i < y; i++) {
     total *= x;
