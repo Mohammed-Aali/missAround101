@@ -1,4 +1,5 @@
-function pow(x, y = 2) { 
+function pow(x, y) { 
+  y = typeof y === "undefined" ? 2 : y;
   let total = 1; 
   for(let i = 0; i < y; i++) {
     total *= x;
