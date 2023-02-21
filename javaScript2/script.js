@@ -2,6 +2,10 @@ pow.calculated = {};
 function pow(x, y) { 
   let stringVersion = x + "^" + y;
   console.log(`string version ` + stringVersion)
+  if(stringVersion in pow.calculated) {
+    console.log("Found");
+    return pow.calculated[stringVersion];
+  }
   let total = 1; 
   for(let i = 0; i < y; i++) {
     total *= x;
