@@ -7,7 +7,7 @@ function pow(x, y) {
     total *= x;
   }
   //pow.calculated.push(total)
-  pow.calculated.stringVersion = total;
+  pow.calculated[stringVersion] = total;
   console.log(pow.calculated)
   return total;
 }
