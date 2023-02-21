@@ -8,4 +8,12 @@ function pow(x, y = 2, ...extra) {
   return total;
 }
 
+function largest(x, ...extra){
+  let largest = x;
+  for(let i = 0; i < extra.length; i++)
+  {
+    extra[i] > largest ? largest = extra[i] : largest;
+  }
+}
+
 console.log(pow(3, 3, 4, 6, 3, 4))
