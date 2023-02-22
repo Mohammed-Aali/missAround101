@@ -42,3 +42,4 @@ Burn.prototype.blaze = function() {
 }
 
 let myFire = new Burn();
+let newFire = new Burn();
