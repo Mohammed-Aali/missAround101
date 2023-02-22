@@ -5,7 +5,7 @@
     this.name = name;
     this.intrest = intrest;
     this.outputStuff = function(){
-      console.log(this.name, this.intrest)
+      console.log("My name is " + this.name, this.intrest)
     }
   }
   let me = new User("Mohammed", ['talking to people', "dancing", "Eating"]);
