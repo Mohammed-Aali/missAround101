@@ -9,7 +9,7 @@
     }
   }
   let me = new User("Mohammed", ['talking to people', "dancing", "Eating"]);
-  let you = newUser("Hermis", ["Hotwheels"])
+  let you = new User("Hermis", ["Hotwheels"])
   console.log(me, you);
 
   me.outputStuff()
