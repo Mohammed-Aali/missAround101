@@ -5,4 +5,10 @@
   }
   console.log(normal())
   console.log(arrow())
+
+  let functions = {
+    arrow: arrow,
+    normal: normal
+  }
+  console.log(functions.arrow);
 }
