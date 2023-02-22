@@ -1,12 +1,15 @@
 {
   let user = {
     active: false,
+    sayHello: "Hello" + this.name 
   };
 
   let student = {
+    name: "god student",
     major: "English"
   }
   let teacher = {
+    name: "Peasant Caleb",
     teaching: ["Math", "Science"]
   }
 
