@@ -8,12 +8,13 @@
 
   // method stuck in the prototype
   User.prototype.summary = function(){
-    console.log("My name is " + this.name, "and I Like " + this.intrest)
+    console.log( this.name, this.intrest)
   }
 
   // instances of new objects
   let me = new User("Mohammed", ['talking to people', " dancing", " Eating"]);
   let you = new User("Hermis", ["Hotwheels"])
+  console.log(you)
 
   me.summary();
   you.summary();
