@@ -8,5 +8,5 @@
   }
 
   Object.setPrototypeOf(teacher, user);
-  console.log(teacher);
+  console.log(teacher.active);
 }
