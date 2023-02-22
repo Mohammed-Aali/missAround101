@@ -1,7 +1,9 @@
 {
   let user = {
     active: false,
-    sayHello: "Hello" + this.name 
+    sayHello:function(){
+      return "Hello " + this.name
+    } 
   };
 
   let student = {
@@ -18,6 +20,6 @@
 
   // its setting false in the student object itslef not the prototype
   student.active = true;
-  console.log("Teacher ", teacher.active);
-  console.log("Student ", student.active);
+  console.log(student.sayHello());
+  console.log(teacher.sayHello());
 }
