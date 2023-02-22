@@ -1,9 +1,9 @@
-function normal() {
-  return this;
+function fact(x) {
+  let total = 1;
+  for (let i = x-1; i > 1; i--) {
+    console.log(total);
+    total*= i;
+  }
+  return total;
 }
-
-let arrow = () => this;
-let x = arrow.bind("hello");
-console.log(x());
-
-console.log(normal.bind("This")())
+console.log(fact(6));
