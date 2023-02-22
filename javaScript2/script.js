@@ -6,9 +6,14 @@ function outputMe() {
   console.log(this);
 }
 function outputMeStrict(){
-    'use strict';
+    'use strict'; // you get undifined if you call it anywhere != but from inside an object aka method.
     console.log(this);
 }
+
+function Person() {
+  console.log(this);
+}
+let person = new Person()
 
 outputMe() // function
 me.outputMe() // method
