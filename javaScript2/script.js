@@ -14,7 +14,10 @@
   }
   let teacher = {
     name: "Peasant Caleb",
-    teaching: ["Math", "Science"]
+    teaching: [" Math", " Science"],
+    sayHello: function() {
+      return "Hello " + this.name + ", teacher of" + this.teaching;
+    } 
   }
 
   Object.setPrototypeOf(teacher, user);
