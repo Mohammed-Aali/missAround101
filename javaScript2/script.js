@@ -13,7 +13,7 @@
   Object.setPrototypeOf(teacher, user);
   Object.setPrototypeOf(student, user);
 
-
-  console.log(teacher.active);
-  console.log(student.active);
+  student.active = false;
+  console.log("Teacher ", teacher.active);
+  console.log("Student ", student.active);
 }
