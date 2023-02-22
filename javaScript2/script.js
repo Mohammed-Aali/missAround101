@@ -39,3 +39,7 @@
   }
 }
 let test = new doSomthing();
+
+if(doSomthing.prototype === Object.getPrototypeOf(test)) {
+  console.log(true);
+}
