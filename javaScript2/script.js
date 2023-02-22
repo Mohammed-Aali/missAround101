@@ -1,9 +1,9 @@
 {
   function User(name){
-    console.log(this)
     this.name = name;
-    console.log(this)
   }
   let me = new User("Mohammed");
+  let you = new User("Hermis")
   console.log(me);
+  console.log(you);
 }
