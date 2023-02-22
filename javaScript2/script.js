@@ -1,6 +1,6 @@
-function doStuff(input) {
-  console.log(input)
+function doStuff(input, input2) {
+  console.log(input + "\n" + input2)
   console.log(this)
 }
 
-doStuff.call(doStuff, 8);
+doStuff.call(doStuff, 8, 10);
