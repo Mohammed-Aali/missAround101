@@ -37,6 +37,5 @@
   function doSomthing(){
     return 1 + 1;
   }
-
-  let test = new doSomthing();
 }
+let test = new doSomthing();
