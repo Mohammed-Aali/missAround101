@@ -13,7 +13,8 @@
   Object.setPrototypeOf(teacher, user);
   Object.setPrototypeOf(student, user);
 
+  // its setting false in the student object itslef not the prototype
   student.active = false;
-  console.log("Teacher ", teacher.active);
-  console.log("Student ", student.active);
+  console.log("Teacher ", teacher);
+  console.log("Student ", student);
 }
