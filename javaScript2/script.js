@@ -1,6 +1,6 @@
 {
   let user = {
-    active: true,
+    active: false,
   };
 
   let student = {
@@ -14,7 +14,7 @@
   Object.setPrototypeOf(student, user);
 
   // its setting false in the student object itslef not the prototype
-  student.active = false;
-  console.log("Teacher ", teacher);
-  console.log("Student ", student);
+  student.active = true;
+  console.log("Teacher ", teacher.active);
+  console.log("Student ", student.active);
 }
