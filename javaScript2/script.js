@@ -5,12 +5,12 @@
     this.name = name;
     this.intrest = intrest;
     this.outputStuff = function(){
-      console.log("My name is " + this.name, this.intrest)
+      console.log("My name is " + this.name, " and  I Like" + this.intrest)
     }
   }
   let me = new User("Mohammed", ['talking to people', "dancing", "Eating"]);
   let you = new User("Hermis", ["Hotwheels"])
-  console.log(me, you);
 
-  me.outputStuff()
+  me.outputStuff();
+  you.outputStuff();
 }
