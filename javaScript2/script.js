@@ -12,9 +12,9 @@
   }
 
   // instances of new objects
-  let me = new User("Mohammed", ['talking to people', "dancing", "Eating"]);
+  let me = new User("Mohammed", ['talking to people', " dancing", " Eating"]);
   let you = new User("Hermis", ["Hotwheels"])
 
-  me.outputStuff();
-  you.outputStuff();
+  me.summary();
+  you.summary();
 }
