@@ -1,4 +1,5 @@
 {
+  // the value of this to the arrow function depends on where it was originally created 
   let arrow = () => this;
   function normal() {
     return this;
