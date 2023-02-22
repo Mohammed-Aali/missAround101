@@ -16,7 +16,11 @@
     name: "Peasant Caleb",
     teaching: [" Math", " Science"],
     sayHello: function() {
-      return "Hello " + this.name + ", teacher of" + this.teaching;
+      let message = this.name + " Teaches"
+      this.teaching.forEach(subject => {
+        message+= subject;
+      })
+      return message;
     } 
   }
 
