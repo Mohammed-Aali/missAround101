@@ -1,9 +1,9 @@
 {
-  function User(banana){
+  function User(name){
     console.log(this)
-    this.name = banana;
+    this.name = name;
     console.log(this)
   }
-  let me = new User();
+  let me = new User("Mohammed");
   console.log(me);
 }
