@@ -32,14 +32,6 @@
   
   let newMember = [teacher, student]
   newMember.forEach(member => console.log(member.sayHello()))
-}
-function Burn() {
-  this.fire = "very hot";
-}
 
-Burn.prototype.blaze = function() {
-  console.log("Blazing it up");
+  console.log("Name in teacher? ", "teach" in teacher);
 }
-
-let myFire = new Burn();
-let newFire = new Burn();
