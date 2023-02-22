@@ -14,11 +14,11 @@
   }
   let teacher = {
     name: "Peasant Caleb",
-    teaching: [" Math", " Science"],
+    teaching: ["Math", "Science"],
     sayHello: function() {
-      let message = this.name + " Teaches"
+      let message = this.name + " Teaches "
       this.teaching.forEach(subject => {
-        message+= subject;
+        message+= subject + " ";
       })
       return message;
     } 
