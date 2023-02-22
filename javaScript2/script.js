@@ -36,4 +36,6 @@
   console.log("Name in teacher? ", "teaching" in teacher);
 
   console.log("Name in teacher? ",  teacher.name !== undefined);
+
+  console.log(teacher);
 }
