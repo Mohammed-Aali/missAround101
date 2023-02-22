@@ -8,11 +8,13 @@
   console.log(arrow())
 
   let functions = {
+    this: this,
     arrow: arrow,
     normal: normal,
     arrowTest: () => this
   }
   console.log(functions.arrow())
   console.log(functions.normal())
+  // returns the window object
   console.log(functions.arrowTest())
 }
