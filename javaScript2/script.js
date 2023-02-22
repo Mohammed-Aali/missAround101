@@ -36,6 +36,7 @@
   let properties = []
 
   for(let prop in teacher) {
+    // this exculdes active from the list
     if(teacher.hasOwnProperty(prop)) {
       properties.push(prop)
     }
