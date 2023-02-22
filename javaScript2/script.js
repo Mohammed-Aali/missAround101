@@ -33,10 +33,18 @@
   let newMember = [teacher, student]
   newMember.forEach(member => console.log(member.sayHello()))
 
+  let properties = []
+
+  for(let prop in teacher) {
+    properties.push(prop)
+  }
+
+  console.log(properties);
+
   // it checks only in the object itself it doesn't go up the inheratince
-  console.log("in teacher ", "active" in teacher);
+  // console.log("in teacher ", "active" in teacher);
 
-  console.log("Name in teacher? ",  teacher.active !== undefined);
+  // console.log("Name in teacher? ",  teacher.active !== undefined);
 
-  console.log(teacher);
+  // console.log(teacher);
 }
