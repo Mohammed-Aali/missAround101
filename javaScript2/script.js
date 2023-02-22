@@ -10,5 +10,6 @@
     arrow: arrow,
     normal: normal
   }
-  console.log(functions.arrow);
+  console.log(functions.arrow())
+  functions.normal()
 }
