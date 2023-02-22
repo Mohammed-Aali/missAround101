@@ -1,4 +1,6 @@
 {
+  // if the property or method is common to all instance of object
+  // if you want a different property you can write it on the object
   let user = {
     active: false,
     sayHello:function(){
