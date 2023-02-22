@@ -3,4 +3,4 @@ function doStuff(input) {
   console.log(this)
 }
 
-doStuff(8);
+doStuff.call(doStuff, 8);
