@@ -11,5 +11,5 @@
     normal: normal
   }
   console.log(functions.arrow())
-  functions.normal()
+  console.log(functions.normal())
 }
