@@ -33,13 +33,12 @@
   let newMember = [teacher, student]
   newMember.forEach(member => console.log(member.sayHello()))
 }
-{
-  function doSomthing(){
-    return 1 + 1;
-  }
+function Burn() {
+  this.fire = "very hot";
 }
-let test = new doSomthing();
 
-if(doSomthing.prototype === Object.getPrototypeOf(test)) {
-  console.log(true);
+Burn.prototype.blaze = function() {
+  console.log("Blazing it up");
 }
+
+let myFire = new Burn();
