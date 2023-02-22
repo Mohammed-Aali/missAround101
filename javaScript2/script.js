@@ -1,9 +1,10 @@
 let me = {
   name: "Mohammed",
-  outputMe: function() {
-    console.log(this)
-  }
+  outputMe: outputMe
 }
-outputMe()
+function outputMe() {
+  console.log(this);
+}
 
+outputMe()
 me.outputMe()
