@@ -12,9 +12,11 @@ function outputMeStrict(){
 
 function Person() {
   console.log(this);
+  this.name = "Mohammed"
+  console.log(this)
 }
 let person = new Person()
-
+console.log(person)
 outputMe() // function
 me.outputMe() // method
 outputMeStrict() // function with strict mode
