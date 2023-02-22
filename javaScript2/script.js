@@ -14,6 +14,6 @@
   Object.setPrototypeOf(student, user);
 
 
-  console.log(teacher);
-  console.log(student);
+  console.log(teacher.active);
+  console.log(student.active);
 }
