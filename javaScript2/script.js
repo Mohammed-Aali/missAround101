@@ -3,4 +3,4 @@ function doStuff(input, input2) {
   console.log(this)
 }
 
-doStuff.call(doStuff, 8, 10);
+doStuff.apply("Hello", [8, 10]);
