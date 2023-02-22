@@ -3,7 +3,7 @@
   // if you want a different property you can write it on the object
   let user = {
     active: false,
-    sayHello:function(){
+    sayHello: function() {
       return "Hello " + this.name
     } 
   };
@@ -22,6 +22,7 @@
 
   // its setting false in the student object itslef not the prototype
   student.active = true;
-  console.log(student.sayHello());
-  console.log(teacher.sayHello());
+  
+  let newMember = [teacher, student]
+  newMember.forEach(member => console.log(member.sayHello()))
 }
