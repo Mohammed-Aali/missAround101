@@ -33,7 +33,7 @@
   let newMember = [teacher, student]
   newMember.forEach(member => console.log(member.sayHello()))
 
-  console.log("Name in teacher? ", "teaching" in teacher);
+  console.log("Name in teacher? ", teacher.hasOwnPropery("name"));
 
   console.log("Name in teacher? ",  teacher.name !== undefined);
 
