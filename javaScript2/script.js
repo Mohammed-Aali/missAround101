@@ -1,8 +1,7 @@
-function fact(x) {
-  let total = 1;
-  for (let i = x; i > 1; i--) {
-    total*= i;
-  }
-  return total;
+try {
+  doesntExist;
+} catch (error) {
+
+} finally {
+  console.log("test");
 }
-console.log(fact(5));
