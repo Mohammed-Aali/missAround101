@@ -1,3 +1,4 @@
 console.log(this);
 let arrow = () => this;
-console.log(arrow());
+let x = arrow.bind("hello");
+console.log(x());
