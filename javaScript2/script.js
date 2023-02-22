@@ -9,8 +9,10 @@
 
   let functions = {
     arrow: arrow,
-    normal: normal
+    normal: normal,
+    arrowTest: () => this
   }
   console.log(functions.arrow())
   console.log(functions.normal())
+  console.log(functions.arrowTest())
 }
