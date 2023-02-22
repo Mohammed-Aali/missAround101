@@ -33,3 +33,8 @@
   let newMember = [teacher, student]
   newMember.forEach(member => console.log(member.sayHello()))
 }
+{
+  function doSomthing(){
+    return 1 + 1;
+  }
+}
