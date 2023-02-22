@@ -33,7 +33,8 @@
   let newMember = [teacher, student]
   newMember.forEach(member => console.log(member.sayHello()))
 
-  console.log("Name in teacher? with has own property ", teacher.hasOwnProperty("active"));
+  // it checks only in the object itself it doesn't go up the inheratince
+  console.log("in teacher ", "active" in teacher);
 
   console.log("Name in teacher? ",  teacher.active !== undefined);
 
