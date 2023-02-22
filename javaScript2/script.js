@@ -1,7 +1,4 @@
-function doStuff(input, input2) {
-  console.log(input + "\n" + input2)
-  console.log(this)
+function cube(x) {
+  return x*x*x;
 }
-let me = {name: "Mohammed"}
-let x = doStuff.bind(me, 8, 9);
-x();
+console.log(cube(6));
