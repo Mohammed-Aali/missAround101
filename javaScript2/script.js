@@ -16,5 +16,7 @@
   }
   button.onmouseleave = (e) => {
     button.innerHTML = "Don't Click me!"
+
+    target.remove();
   }
 }
