@@ -1,3 +1,9 @@
+{
+  let list = document.getElementsByTagName("li");
 
-  let list = document.getElementsByClassName("border");
-  console.log(list)
+  if(list[0].nodeType === 1) {
+    console.log("Element");
+  } else if(list[0] === 3) {
+    console.lof("Text")
+  }
+}
