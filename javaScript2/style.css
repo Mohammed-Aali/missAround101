@@ -1,6 +1,12 @@
 * {
     background-color: antiquewhite;
 }
+
+button {
+    background-color: gold;
+    border: blue dashed !important;
+}
+
 button {
     background: white;
     border: solid 0.5px black;
