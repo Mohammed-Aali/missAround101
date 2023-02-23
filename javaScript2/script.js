@@ -20,7 +20,7 @@ function Teacher(name, teaching) {
 
 
 let student1 = new Student("beach ball", "English");
-let teacher1 = new Teacher("English", ["Math", "Science"])
+let teacher1 = new Teacher("Caleb", ["Math", "Science"])
 
 console.log(student1);
 console.log(teacher1);
@@ -56,7 +56,6 @@ console.log(teacher1);
   student.active = true;
   
   let newMember = [teacher, student]
-  newMember.forEach(member => console.log(member.sayHello()))
 
   let properties = []
 
@@ -67,7 +66,6 @@ console.log(teacher1);
     }
   }
 
-  console.log(properties);
 
   // it checks only in the object itself it doesn't go up the inheratince
   // console.log("in teacher ", "active" in teacher);
