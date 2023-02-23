@@ -1,4 +1,4 @@
 {
-  let x  = document.getElementById("input").hasAttribute("tacos");
+  let x  = document.getElementById("input").attributes;
   console.log(x)
 }
