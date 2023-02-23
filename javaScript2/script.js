@@ -1,6 +1,6 @@
 {
   let list = document.getElementsByTagName("li");
-  console.log(list[0])
+  console.log(list[0].childNodes[0]);
 
 
   if(list[0].nodeType === 1) {
