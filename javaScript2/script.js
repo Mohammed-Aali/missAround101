@@ -29,8 +29,12 @@ let student1 = new Student("beach ball", "English");
 let teacher1 = new Teacher("Caleb", ["Math", "Science"])
 
 // console.log(student1, teacher1);
-console.log(teacher1 instanceof Teacher);
-console.log(student1 instanceof User)
+function doSomething(user) {
+  if(user instanceof User) {
+    return 5;
+  }
+  return -1;
+}
 
-teacher1 instanceof Student ? console.log("yup") : console.log("nope");
+console.log(doSomething(User))
 }
