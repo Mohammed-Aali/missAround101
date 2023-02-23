@@ -15,6 +15,6 @@
     button.innerHTML = "click me please!!";
   }
   button.onmouseleave = (e) => {
-    button.innerHTML = "Don't click me!"
+    button.innerHTML = "Don't Click me!"
   }
 }
