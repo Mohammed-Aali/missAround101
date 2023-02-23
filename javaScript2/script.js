@@ -19,6 +19,9 @@ function Teacher(name, teaching) {
   this.teaching = teaching; 
 }
 Teacher.prototype = new User;
+Teacher.prototype.sayHello = function(){
+  return "Teacher says hi";
+} 
 
 let student1 = new Student("beach ball", "English");
 let teacher1 = new Teacher("Caleb", ["Math", "Science"])
