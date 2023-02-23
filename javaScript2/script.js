@@ -4,5 +4,8 @@
   let target = list[0];
   console.log(target)
 
-  target.onmousemove = (e) => console.log("Mouse over");
+  target.onmousemove = (e) => {
+    console.log("Mouse over")
+    target.childNodes[0].nodeValue = "Hoes";
+  };
 }
