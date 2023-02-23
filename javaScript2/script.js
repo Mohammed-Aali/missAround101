@@ -8,4 +8,10 @@
     console.log("Mouse over");
     target.children[0].innerHTML = "Hoes";
   };
+
+  let button = document.getElementById("click");
+  button.onmouseenter = (e) => {
+
+    button.innerHTML = "click me please!!";
+  }
 }
