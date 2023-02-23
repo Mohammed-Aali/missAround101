@@ -6,6 +6,6 @@
 
   target.onmousemove = (e) => {
     console.log("Mouse over")
-    target.childNodes[0].nodeValue = "Hoes";
+    target.childNodes[1].childNodes[0].nodeValue = "Hoes";
   };
 }
