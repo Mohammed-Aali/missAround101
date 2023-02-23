@@ -12,12 +12,13 @@ function Student(name, major) {
   this.name = name;
   this.major = major;
 }
+Student.prototype = new User;
 
 function Teacher(name, teaching) {
   this.name = name;
   this.teaching = teaching; 
 }
-
+Teacher.prototype = new User;
 
 let student1 = new Student("beach ball", "English");
 let teacher1 = new Teacher("Caleb", ["Math", "Science"])
