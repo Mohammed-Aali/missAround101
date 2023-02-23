@@ -1,5 +1,3 @@
 
-  let list = document.childNodes[1].childNodes[2].childNodes[3].childNodes[1];
+  let list = document.getElementsByTagName("li");
   console.log(list)
-  console.log(list.parentElement)
-  console.log(list.nextSibling.nextSibling)
