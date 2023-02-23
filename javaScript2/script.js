@@ -1,3 +1,4 @@
 {
-  document.getElementById("input").value = "zebra";
+  let x  = document.getElementById("input").hasAttribute("tacos");
+  console.log(x)
 }
