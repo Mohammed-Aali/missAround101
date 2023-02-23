@@ -1,4 +1,4 @@
 {
-  let h2 = document.getElementsByTagName("h2");
-  console.log(h2)
+  let paragraphs = document.getElementsByTagName("p");
+  console.log(paragraphs)
 }
