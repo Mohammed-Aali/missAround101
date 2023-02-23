@@ -1,3 +1,5 @@
 {
-document.getElementById("click").addEventListener("click", e => console.log("clicked"))
+let btn = document.getElementById("click").addEventListener("click", e => console.log("clicked"))
+btn.style.background = "red";
 }
+
