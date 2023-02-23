@@ -27,4 +27,6 @@ let student1 = new Student("beach ball", "English");
 let teacher1 = new Teacher("Caleb", ["Math", "Science"])
 
 // console.log(student1, teacher1);
+console.log(teacher1 instanceof Teacher);
+console.log(student1 instanceof User)
 }
