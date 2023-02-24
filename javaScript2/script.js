@@ -3,7 +3,7 @@
 
   btn.onclick = (e) => {
     let node = document.createElement("li");
-    node.appendChild(document.createTextNode("new list"))
+    node.appendChild(document.createTextNode(document.getElementById("input").value))
     console.log(node);
 
     let list = document.getElementById("items");
