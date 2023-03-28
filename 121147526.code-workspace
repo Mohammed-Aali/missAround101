@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://codespaces+mohammed-aali-humble-space-chainsaw-r96wv9wvp5pfxgvx/workspaces/121147526"
+		}
+	],
+	"remoteAuthority": "codespaces+mohammed-aali-humble-space-chainsaw-r96wv9wvp5pfxgvx",
+	"settings": {
+		"gitdoc.enabled": true,
+		"files.associations": {
+			"numbers": "c",
+			"memory": "c",
+			"helpers.h": "c"
+		}
+	}
+}
